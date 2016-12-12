@@ -29,6 +29,8 @@
     self = [super init];
     if (self)
     {
+        self.optionIds  = [@{ } mutableCopy];
+        self.options    = [@{ } mutableCopy];
     }
     
     return self;
@@ -74,6 +76,9 @@
     self.myReview                   = object.myReview;
     self.myRating                   = object.myRating;
     self.myFollow                   = object.myFollow;
+    
+    self.optionIds      = [object.optionIds mutableCopy];
+    self.options        = [object.options mutableCopy];
     
     if (object.locations || ![self.id isEqualToString:object.id])
     {

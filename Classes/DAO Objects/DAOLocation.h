@@ -48,6 +48,9 @@
 @property (nonatomic, copy) DAOReview*      myReview;
 @property (nonatomic, copy) DAOWishlist*    myWishlist;
 
+@property (copy, nonatomic)     NSMutableDictionary*    optionIds;
+@property (copy, nonatomic)     NSMutableDictionary*    options;
+
 @property (nonatomic, copy) NSArray<DAOItem*>*  items;
 @property (nonatomic, copy) NSArray<DAOPhoto*>* photos;
 

@@ -62,6 +62,7 @@
 @property (copy, nonatomic)     NSNumber*   numItemsCheckins;
 
 @property (copy, nonatomic)     NSMutableDictionary*    optionIds;
+@property (copy, nonatomic)     NSMutableDictionary*    options;
 
 @property (nonatomic, assign, getter = didAskBrewer)    BOOL askBrewer;
 

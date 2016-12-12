@@ -25,6 +25,8 @@
     self = [super init];
     if (self)
     {
+        self.optionIds  = [@{ } mutableCopy];
+        self.options    = [@{ } mutableCopy];
     }
     
     return self;
@@ -67,6 +69,9 @@
     self.numRatings         = object.numRatings;
     self.numReviews         = object.numReviews;
     self.numWishlists       = object.numWishlists;
+    
+    self.optionIds      = [object.optionIds mutableCopy];
+    self.options        = [object.options mutableCopy];
     
     if (object.photos || ![self.id isEqualToString:object.id])
     {

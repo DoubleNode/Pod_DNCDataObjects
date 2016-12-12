@@ -31,6 +31,7 @@
     if (self)
     {
         self.optionIds  = [@{ } mutableCopy];
+        self.options    = [@{ } mutableCopy];
     }
     
     return self;
@@ -98,6 +99,7 @@
     self.numItemsCheckins       = object.numItemsCheckins;
     
     self.optionIds      = [object.optionIds mutableCopy];
+    self.options        = [object.options mutableCopy];
     
     self.myFollow       = object.myFollow;
     
