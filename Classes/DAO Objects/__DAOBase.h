@@ -24,8 +24,8 @@
 
 - (NSString*)idFromString:(NSString*)string;
 
+- (NSNumber*)numberFromNumber:(NSNumber*)number;
 - (NSNumber*)numberFromString:(NSString*)string;
-
 - (NSNumber*)numberFromString:(NSString*)string
                usingFormatter:(NSNumberFormatter*)numberFormatter;
 

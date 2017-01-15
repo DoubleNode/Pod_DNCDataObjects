@@ -93,6 +93,21 @@
     return [NSString stringWithFormat:@"%@", string];
 }
 
+- (NSNumber*)numberFromNumber:(NSNumber*)number
+{
+    if ([number isKindOfClass:NSNumber.class])
+    {
+        return (NSNumber*)number;
+    }
+    
+    if (!number || [number isKindOfClass:NSNull.class])
+    {
+        return @0;
+    }
+
+    return @0;
+}
+
 - (NSNumber*)numberFromString:(NSString*)string
 {
     return [self numberFromString:string usingFormatter:nil];

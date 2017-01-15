@@ -24,6 +24,7 @@
 		6A7E0DCD1DCE354C0077EC6E /* DAOUserDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DBD1DCE354C0077EC6E /* DAOUserDevice.m */; };
 		6A7E0DCE1DCE354C0077EC6E /* DAOWishlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DBF1DCE354C0077EC6E /* DAOWishlist.m */; };
 		6A7E0DD21DCE369A0077EC6E /* DAOActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DD11DCE369A0077EC6E /* DAOActivity.m */; };
+		6A81CC991E2AD6E800C4613A /* DAOSocialAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */; };
 		6ACFB5F21DC9940D00CC388F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB5F11DC9940D00CC388F /* main.m */; };
 		6ACFB5F51DC9940D00CC388F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB5F41DC9940D00CC388F /* AppDelegate.m */; };
 		6ACFB5F81DC9940D00CC388F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB5F71DC9940D00CC388F /* ViewController.m */; };
@@ -31,7 +32,6 @@
 		6ACFB5FD1DC9940D00CC388F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACFB5FC1DC9940D00CC388F /* Assets.xcassets */; };
 		6ACFB6001DC9940D00CC388F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACFB5FE1DC9940D00CC388F /* LaunchScreen.storyboard */; };
 		6ACFB60B1DC9940D00CC388F /* DNCDataObjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB60A1DC9940D00CC388F /* DNCDataObjectsTests.m */; };
-		6ACFB6461DC994DD00CC388F /* DNCDataObjects.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6ACFB6441DC994DD00CC388F /* DNCDataObjects.podspec */; };
 		C09F81DD9F97694D20CCC62A /* Pods_DNCDataObjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C907570AF85D3A35080A67FA /* Pods_DNCDataObjectsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +80,8 @@
 		6A7E0DBF1DCE354C0077EC6E /* DAOWishlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOWishlist.m; path = "Classes/DAO Objects/DAOWishlist.m"; sourceTree = "<group>"; };
 		6A7E0DD01DCE369A0077EC6E /* DAOActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOActivity.h; path = "Classes/DAO Objects/DAOActivity.h"; sourceTree = "<group>"; };
 		6A7E0DD11DCE369A0077EC6E /* DAOActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOActivity.m; path = "Classes/DAO Objects/DAOActivity.m"; sourceTree = "<group>"; };
+		6A81CC971E2AD6E800C4613A /* DAOSocialAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOSocialAccount.h; path = "Classes/DAO Objects/DAOSocialAccount.h"; sourceTree = "<group>"; };
+		6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOSocialAccount.m; path = "Classes/DAO Objects/DAOSocialAccount.m"; sourceTree = "<group>"; };
 		6ACFB5ED1DC9940D00CC388F /* DNCDataObjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNCDataObjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACFB5F11DC9940D00CC388F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6ACFB5F31DC9940D00CC388F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +161,8 @@
 				6A7E0DB71DCE354C0077EC6E /* DAORating.m */,
 				6A7E0DB81DCE354C0077EC6E /* DAOReview.h */,
 				6A7E0DB91DCE354C0077EC6E /* DAOReview.m */,
+				6A81CC971E2AD6E800C4613A /* DAOSocialAccount.h */,
+				6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */,
 				6A7E0DBA1DCE354C0077EC6E /* DAOUser.h */,
 				6A7E0DBB1DCE354C0077EC6E /* DAOUser.m */,
 				6A7E0DBC1DCE354C0077EC6E /* DAOUserDevice.h */,
@@ -342,7 +346,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ACFB6461DC994DD00CC388F /* DNCDataObjects.podspec in Resources */,
 				6ACFB6001DC9940D00CC388F /* LaunchScreen.storyboard in Resources */,
 				6ACFB5FD1DC9940D00CC388F /* Assets.xcassets in Resources */,
 				6ACFB5FB1DC9940D00CC388F /* Main.storyboard in Resources */,
@@ -461,6 +464,7 @@
 				6A7E0DC21DCE354C0077EC6E /* DAOCheckin.m in Sources */,
 				6A7E0DCD1DCE354C0077EC6E /* DAOUserDevice.m in Sources */,
 				6A7E0DC51DCE354C0077EC6E /* DAOItem.m in Sources */,
+				6A81CC991E2AD6E800C4613A /* DAOSocialAccount.m in Sources */,
 				6ACFB5F21DC9940D00CC388F /* main.m in Sources */,
 				6A7E0DC61DCE354C0077EC6E /* DAOLocation.m in Sources */,
 				6A7E0DC31DCE354C0077EC6E /* DAOFavorite.m in Sources */,
