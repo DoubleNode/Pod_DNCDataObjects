@@ -73,14 +73,19 @@
     self.optionIds      = [object.optionIds mutableCopy];
     self.options        = [object.options mutableCopy];
     
+    if (object.items || ![self.id isEqualToString:object.id])
+    {
+        self.items  = object.items;
+    }
+    
     if (object.photos || ![self.id isEqualToString:object.id])
     {
         self.photos = object.photos;
     }
 
-    if (object.items || ![self.id isEqualToString:object.id])
+    if (object.socialAccounts || ![self.id isEqualToString:object.id])
     {
-        self.items  = object.items;
+        self.socialAccounts  = object.socialAccounts;
     }
     
     return self;

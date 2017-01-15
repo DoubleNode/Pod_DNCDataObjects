@@ -14,6 +14,7 @@
 @class DAOPhoto;
 @class DAORating;
 @class DAOReview;
+@class DAOSocialAccount;
 @class DAOWishlist;
 
 @interface DAOLocation : DAOBase
@@ -51,7 +52,8 @@
 @property (copy, nonatomic)     NSMutableDictionary*    optionIds;
 @property (copy, nonatomic)     NSMutableDictionary*    options;
 
-@property (nonatomic, copy) NSArray<DAOItem*>*  items;
-@property (nonatomic, copy) NSArray<DAOPhoto*>* photos;
+@property (nonatomic, copy) NSArray<DAOItem*>*          items;
+@property (nonatomic, copy) NSArray<DAOPhoto*>*         photos;
+@property (nonatomic, copy) NSArray<DAOSocialAccount*>* socialAccounts;
 
 @end

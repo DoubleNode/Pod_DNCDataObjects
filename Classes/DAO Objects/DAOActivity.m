@@ -38,11 +38,11 @@ NSString* const kActivityTypePhoto      = @"photo";
 
 #pragma mark - Object lifecycle
 
-+ (instancetype)activity   {   return [[[self class] alloc] init]; }
++ (instancetype)activity   {   return [self.class.alloc init]; }
 
 + (instancetype)copyFrom:(DAOActivity*)object
 {
-    return [[[[self class] alloc] init] updateWith:object];
+    return [[self.class.alloc init] updateWith:object];
 }
 
 - (id)init
