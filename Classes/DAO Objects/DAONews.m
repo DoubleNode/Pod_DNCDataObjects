@@ -10,8 +10,13 @@
 
 @implementation DAONews
 
-+ (instancetype)news    {   return [[[self class] alloc] init]; }
++ (instancetype)news    {   return [self.class.alloc init]; }
 
++ (instancetype)copyFrom:(DAONews*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
+ 
 - (id)init
 {
     self = [super init];
@@ -39,23 +44,23 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAONews*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    copy.title      = self.title;
-    copy.body       = self.body;
-    copy.bodyShort  = self.bodyShort;
-    
-    copy.imageUrl   = self.imageUrl;
-    
-    copy.expiration = self.expiration;
-    
-    copy.numFavorites   = self.numFavorites;
-    
-    copy.myFavorite     = self.myFavorite;
-    
-    return copy;
+    self.title      = object.title;
+    self.body       = object.body;
+    self.bodyShort  = object.bodyShort;
+
+    self.imageUrl       = object.imageUrl;
+
+    self.expiration     = object.expiration;
+
+    self.numFavorites   = object.numFavorites;
+
+    self.myFavorite     = object.myFavorite;
+
+    return object;
 }
 
 @end

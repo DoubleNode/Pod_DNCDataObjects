@@ -14,7 +14,12 @@
 
 #pragma mark - Object lifecycle
 
-+ (instancetype)userDevice  {   return [[[self class] alloc] init]; }
++ (instancetype)userDevice  {   return [self.class.alloc init]; }
+
++ (instancetype)copyFrom:(DAOUserDevice*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
 
 - (id)init
 {
@@ -43,23 +48,20 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAOUserDevice*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    if (self.user || ![copy.userId isEqualToString:self.userId])
+    self.deviceId       = object.deviceId;
+    self.deviceType     = object.deviceType;
+    
+    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
     {
-        copy.user  = self.user;
+        self.user   = object.user;
     }
-    copy.userId  = self.userId;
+    self.userId = object.userId;
     
-    copy.deviceId       = self.deviceId;
-    copy.deviceType     = self.deviceType;
-    
-    copy.userId         = self.userId;
-    copy.user           = self.user;
-    
-    return copy;
+    return object;
 }
 
 @end

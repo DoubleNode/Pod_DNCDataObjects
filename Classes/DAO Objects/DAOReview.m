@@ -18,7 +18,12 @@
 
 #pragma mark - Object lifecycle
 
-+ (instancetype)review   {   return [[[self class] alloc] init]; }
++ (instancetype)review   {   return [self.class.alloc init]; }
+
++ (instancetype)copyFrom:(DAOReview*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
 
 - (id)init
 {
@@ -53,45 +58,44 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAOReview*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    copy.text           = self.text;
+    self.text           = object.text;
+    self.ratingValue    = object.ratingValue;
     
-    copy.ratingValue    = self.ratingValue;
-    
-    if (self.item || ![copy.itemId isEqualToString:self.itemId])
+    if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {
-        copy.item  = self.item;
+        self.item   = object.item;
     }
-    copy.itemId  = self.itemId;
+    self.itemId = object.itemId;
     
-    if (self.location || ![copy.locationId isEqualToString:self.locationId])
+    if (object.location || (object.locationId && ![self.locationId isEqualToString:object.locationId]))
     {
-        copy.location  = self.location;
+        self.location   = object.location;
     }
-    copy.locationId  = self.locationId;
+    self.locationId = object.locationId;
     
-    if (self.rating || ![copy.ratingId isEqualToString:self.ratingId])
+    if (object.photo || (object.photoId && ![self.photoId isEqualToString:object.photoId]))
     {
-        copy.rating  = self.rating;
+        self.photo = object.photo;
     }
-    copy.ratingId  = self.ratingId;
+    self.photoId   = object.photoId;
     
-    if (self.photo || ![copy.photoId isEqualToString:self.photoId])
+    if (object.rating || (object.ratingId && ![self.ratingId isEqualToString:object.ratingId]))
     {
-        copy.photo  = self.photo;
+        self.rating = object.rating;
     }
-    copy.photoId  = self.photoId;
+    self.ratingId   = object.ratingId;
     
-    if (self.user || ![copy.userId isEqualToString:self.userId])
+    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
     {
-        copy.user  = self.user;
+        self.user   = object.user;
     }
-    copy.userId  = self.userId;
+    self.userId = object.userId;
     
-    return copy;
+    return object;
 }
 
 @end

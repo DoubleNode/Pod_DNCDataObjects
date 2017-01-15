@@ -14,7 +14,12 @@
 
 @implementation DAOFollow
 
-+ (instancetype)follow   {   return [[[self class] alloc] init]; }
++ (instancetype)follow   {   return [self.class.alloc init]; }
+
++ (instancetype)copyFrom:(DAOFollow*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
 
 #pragma mark - Object lifecycle
 
@@ -50,35 +55,35 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAOFollow*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    if (self.item || ![copy.itemId isEqualToString:self.itemId])
+    if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {
-        copy.item  = self.item;
+        self.item   = object.item;
     }
-    copy.itemId  = self.itemId;
+    self.itemId = object.itemId;
     
-    if (self.location || ![copy.locationId isEqualToString:self.locationId])
+    if (object.location || (object.locationId && ![self.locationId isEqualToString:object.locationId]))
     {
-        copy.location   = self.location;
+        self.location   = object.location;
     }
-    copy.locationId = self.locationId;
+    self.locationId = object.locationId;
     
-    if (self.user2 || ![copy.user2Id isEqualToString:self.user2Id])
+    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
     {
-        copy.user2  = self.user2;
+        self.user   = object.user;
     }
-    copy.user2Id  = self.user2Id;
+    self.userId = object.userId;
     
-    if (self.user || ![copy.userId isEqualToString:self.userId])
+    if (object.user2 || (object.user2Id && ![self.user2Id isEqualToString:object.user2Id]))
     {
-        copy.user  = self.user;
+        self.user2   = object.user2;
     }
-    copy.userId  = self.userId;
+    self.user2Id = object.user2Id;
     
-    return copy;
+    return self;
 }
 
 @end

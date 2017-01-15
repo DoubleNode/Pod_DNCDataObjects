@@ -47,29 +47,34 @@
 @property (copy, nonatomic)     NSNumber*   numUsersFollowing;
 @property (copy, nonatomic)     NSNumber*   numUsersFollowers;
 
-@property (copy, nonatomic)     NSNumber*   numLocationsFollowers;
-@property (copy, nonatomic)     NSNumber*   numLocationsRatings;
-@property (copy, nonatomic)     NSNumber*   numLocationsReviews;
-@property (copy, nonatomic)     NSNumber*   numLocationsFavorites;
-@property (copy, nonatomic)     NSNumber*   numLocationsWishlists;
-@property (copy, nonatomic)     NSNumber*   numLocationsCheckins;
+@property (copy, nonatomic)     NSNumber*   numCategoriesCheckins;
+@property (copy, nonatomic)     NSNumber*   numCategoriesFavorites;
+@property (copy, nonatomic)     NSNumber*   numCategoriesFollowers;
+@property (copy, nonatomic)     NSNumber*   numCategoriesRatings;
+@property (copy, nonatomic)     NSNumber*   numCategoriesReviews;
+@property (copy, nonatomic)     NSNumber*   numCategoriesWishlists;
 
+@property (copy, nonatomic)     NSNumber*   numItemsCheckins;
+@property (copy, nonatomic)     NSNumber*   numItemsFavorites;
 @property (copy, nonatomic)     NSNumber*   numItemsFollowers;
 @property (copy, nonatomic)     NSNumber*   numItemsRatings;
 @property (copy, nonatomic)     NSNumber*   numItemsReviews;
-@property (copy, nonatomic)     NSNumber*   numItemsFavorites;
 @property (copy, nonatomic)     NSNumber*   numItemsWishlists;
-@property (copy, nonatomic)     NSNumber*   numItemsCheckins;
+
+@property (copy, nonatomic)     NSNumber*   numLocationsCheckins;
+@property (copy, nonatomic)     NSNumber*   numLocationsFavorites;
+@property (copy, nonatomic)     NSNumber*   numLocationsFollowers;
+@property (copy, nonatomic)     NSNumber*   numLocationsRatings;
+@property (copy, nonatomic)     NSNumber*   numLocationsReviews;
+@property (copy, nonatomic)     NSNumber*   numLocationsWishlists;
 
 @property (copy, nonatomic)     NSMutableDictionary*    optionIds;
 @property (copy, nonatomic)     NSMutableDictionary*    options;
 
-@property (nonatomic, assign, getter = didAskBrewer)    BOOL askBrewer;
-
 @property (copy, nonatomic)     DAOFollow*  myFollow;
 
+@property (nonatomic, copy) NSArray<DAOUserDevice*>*    devices;
 @property (nonatomic, copy) NSArray<DAOFavorite*>*      favorites;
 @property (nonatomic, copy) NSArray<DAOWishlist*>*      wishlists;
-@property (nonatomic, copy) NSArray<DAOUserDevice*>*    devices;
 
 @end

@@ -83,12 +83,6 @@ NSString* const kActivityTypePhoto      = @"photo";
     self.type   = object.type;
     self.typeId = object.typeId;
     
-    if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
-    {
-        self.item   = object.item;
-    }
-    self.itemId = object.itemId;
-    
     if (object.checkin || (object.checkinId && ![self.checkinId isEqualToString:object.checkinId]))
     {
         self.checkin    = object.checkin;
@@ -100,6 +94,12 @@ NSString* const kActivityTypePhoto      = @"photo";
         self.favorite   = object.favorite;
     }
     self.favoriteId = object.favoriteId;
+    
+    if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
+    {
+        self.item   = object.item;
+    }
+    self.itemId = object.itemId;
     
     if (object.location || (object.locationId && ![self.locationId isEqualToString:object.locationId]))
     {

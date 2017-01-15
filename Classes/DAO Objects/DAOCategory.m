@@ -1,21 +1,18 @@
 //
-//  DAOLocation.m
+//  DAOCategory.m
 //  DoubleNode Core
 //
 //  Created by Darren Ehlers on 2016/10/16.
 //  Copyright © 2016 Darren Ehlers and DoubleNode, LLC. All rights reserved.
 //
 
-#import "DAOLocation.h"
+#import "DAOCategory.h"
 
-#import "DAOItem.h"
-#import "DAOPhoto.h"
+@implementation DAOCategory
 
-@implementation DAOLocation
++ (instancetype)category    {   return [self.class.alloc init]; }
 
-+ (instancetype)location    {   return [self.class.alloc init]; }
-
-+ (instancetype)copyFrom:(DAOLocation*)object
++ (instancetype)copyFrom:(DAOCategory*)object
 {
     return [[self.class.alloc init] updateWith:object];
 }
@@ -34,34 +31,27 @@
 
 - (BOOL)isEqual:(id)object
 {
-    if (![object isKindOfClass:[self class]])
+    if (![super isEqual:object])
     {
         return NO;
     }
     
-    return [self isEqualToLocation:object];
+    return [self isEqualToCategory:object];
 }
 
-- (BOOL)isEqualToLocation:(DAOLocation*)object
+- (BOOL)isEqualToCategory:(DAOCategory*)object
 {
     if (![super isEqualToBase:object])  {   return NO;  }
     
     return YES;
 }
 
-- (id)updateWith:(DAOLocation*)object
+- (id)updateWith:(DAOCategory*)object
 {
     [super updateWith:object];
     
-    self.externalId         = object.externalId;
-    self.name               = object.name;
-    self.type               = object.type;
+    self.title              = object.title;
     self.descriptionString  = object.descriptionString;
-    self.website            = object.website;
-    self.established        = object.established;
-    self.mailingListURL     = object.mailingListURL;
-    
-    self.followingFlag      = object.followingFlag;
     
     self.numCheckins        = object.numCheckins;
     self.numFavorites       = object.numFavorites;
@@ -70,17 +60,40 @@
     self.numReviews         = object.numReviews;
     self.numWishlists       = object.numWishlists;
     
+    self.myFavorite         = object.myFavorite;
+    self.myFollow           = object.myFollow;
+    self.myRating           = object.myRating;
+    self.myReview           = object.myReview;
+    self.myWishlist         = object.myWishlist;
+    
+    self.myFollow       = object.myFollow;
+    
     self.optionIds      = [object.optionIds mutableCopy];
     self.options        = [object.options mutableCopy];
     
-    if (object.photos || ![self.id isEqualToString:object.id])
+    if (object.favorites || ![self.id isEqualToString:object.id])
     {
-        self.photos = object.photos;
+        self.favorites  = object.favorites;
     }
-
+    
     if (object.items || ![self.id isEqualToString:object.id])
     {
         self.items  = object.items;
+    }
+    
+    if (object.locations || ![self.id isEqualToString:object.id])
+    {
+        self.locations  = object.locations;
+    }
+    
+    if (object.photos || ![self.id isEqualToString:object.id])
+    {
+        self.photos  = object.photos;
+    }
+    
+    if (object.wishlists || ![self.id isEqualToString:object.id])
+    {
+        self.wishlists  = object.wishlists;
     }
     
     return self;

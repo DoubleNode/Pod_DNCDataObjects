@@ -17,11 +17,11 @@
 
 @implementation DAOItem
 
-+ (instancetype)item    {   return [[self.class alloc] init]; }
++ (instancetype)item    {   return [self.class.alloc init]; }
 
 + (instancetype)copyFrom:(DAOItem*)object
 {
-    return [[[self.class alloc] init] updateWith:object];
+    return [[self.class.alloc init] updateWith:object];
 }
 
 - (id)init
@@ -64,18 +64,18 @@
     self.descriptionString          = object.descriptionString;
     self.rating                     = object.rating;
     
-    self.numFollowers               = object.numFollowers;
-    self.numRatings                 = object.numRatings;
-    self.numReviews                 = object.numReviews;
-    self.numFavorites               = object.numFavorites;
-    self.numWishlists               = object.numWishlists;
-    self.numCheckins                = object.numCheckins;
+    self.numCheckins        = object.numCheckins;
+    self.numFavorites       = object.numFavorites;
+    self.numFollowers       = object.numFollowers;
+    self.numRatings         = object.numRatings;
+    self.numReviews         = object.numReviews;
+    self.numWishlists       = object.numWishlists;
     
-    self.myFavorite                 = object.myFavorite;
-    self.myWishlist                 = object.myWishlist;
-    self.myReview                   = object.myReview;
-    self.myRating                   = object.myRating;
-    self.myFollow                   = object.myFollow;
+    self.myFavorite         = object.myFavorite;
+    self.myFollow           = object.myFollow;
+    self.myRating           = object.myRating;
+    self.myReview           = object.myReview;
+    self.myWishlist         = object.myWishlist;
     
     self.optionIds      = [object.optionIds mutableCopy];
     self.options        = [object.options mutableCopy];

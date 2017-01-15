@@ -17,6 +17,11 @@
 
 + (instancetype)socialAccount   {   return [self.class.alloc init]; }
 
++ (instancetype)copyFrom:(DAOSocialAccount*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
+
 - (id)init
 {
     self = [super init];
@@ -47,27 +52,27 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAOSocialAccount*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    copy.type       = self.type;
-    copy.handle     = self.handle;
-    copy.url        = self.url;
+    self.type       = object.type;
+    self.handle     = object.handle;
+    self.url        = object.url;
     
-    if (self.location || ![copy.locationId isEqualToString:self.locationId])
+    if (object.location || (object.locationId && ![self.locationId isEqualToString:object.locationId]))
     {
-        copy.location  = self.location;
+        self.location   = object.location;
     }
-    copy.locationId  = self.locationId;
+    self.locationId = object.locationId;
     
-    if (self.user || ![copy.userId isEqualToString:self.userId])
+    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
     {
-        copy.user   = self.user;
+        self.user   = object.user;
     }
-    copy.userId = self.userId;
+    self.userId = object.userId;
     
-    return copy;
+    return object;
 }
 
 @end

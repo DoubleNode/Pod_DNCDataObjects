@@ -25,6 +25,7 @@
 		6A7E0DCE1DCE354C0077EC6E /* DAOWishlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DBF1DCE354C0077EC6E /* DAOWishlist.m */; };
 		6A7E0DD21DCE369A0077EC6E /* DAOActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DD11DCE369A0077EC6E /* DAOActivity.m */; };
 		6A81CC991E2AD6E800C4613A /* DAOSocialAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */; };
+		6A81CCAC1E2B336000C4613A /* DAOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A81CCAB1E2B336000C4613A /* DAOCategory.m */; };
 		6ACFB5F21DC9940D00CC388F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB5F11DC9940D00CC388F /* main.m */; };
 		6ACFB5F51DC9940D00CC388F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB5F41DC9940D00CC388F /* AppDelegate.m */; };
 		6ACFB5F81DC9940D00CC388F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB5F71DC9940D00CC388F /* ViewController.m */; };
@@ -82,6 +83,8 @@
 		6A7E0DD11DCE369A0077EC6E /* DAOActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOActivity.m; path = "Classes/DAO Objects/DAOActivity.m"; sourceTree = "<group>"; };
 		6A81CC971E2AD6E800C4613A /* DAOSocialAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOSocialAccount.h; path = "Classes/DAO Objects/DAOSocialAccount.h"; sourceTree = "<group>"; };
 		6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOSocialAccount.m; path = "Classes/DAO Objects/DAOSocialAccount.m"; sourceTree = "<group>"; };
+		6A81CCAA1E2B336000C4613A /* DAOCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOCategory.h; path = "Classes/DAO Objects/DAOCategory.h"; sourceTree = "<group>"; };
+		6A81CCAB1E2B336000C4613A /* DAOCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOCategory.m; path = "Classes/DAO Objects/DAOCategory.m"; sourceTree = "<group>"; };
 		6ACFB5ED1DC9940D00CC388F /* DNCDataObjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNCDataObjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ACFB5F11DC9940D00CC388F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6ACFB5F31DC9940D00CC388F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				6A7E0DD11DCE369A0077EC6E /* DAOActivity.m */,
 				6A7E0DA41DCE354C0077EC6E /* DAOAuth.h */,
 				6A7E0DA51DCE354C0077EC6E /* DAOAuth.m */,
+				6A81CCAA1E2B336000C4613A /* DAOCategory.h */,
+				6A81CCAB1E2B336000C4613A /* DAOCategory.m */,
 				6A7E0DA61DCE354C0077EC6E /* DAOCheckin.h */,
 				6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */,
 				6A7E0DA81DCE354C0077EC6E /* DAOFavorite.h */,
@@ -467,6 +472,7 @@
 				6A81CC991E2AD6E800C4613A /* DAOSocialAccount.m in Sources */,
 				6ACFB5F21DC9940D00CC388F /* main.m in Sources */,
 				6A7E0DC61DCE354C0077EC6E /* DAOLocation.m in Sources */,
+				6A81CCAC1E2B336000C4613A /* DAOCategory.m in Sources */,
 				6A7E0DC31DCE354C0077EC6E /* DAOFavorite.m in Sources */,
 				6A7E0DCC1DCE354C0077EC6E /* DAOUser.m in Sources */,
 				6A7E0DC41DCE354C0077EC6E /* DAOFollow.m in Sources */,

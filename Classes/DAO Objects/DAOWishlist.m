@@ -16,7 +16,12 @@
 
 #pragma mark - Object lifecycle
 
-+ (instancetype)wishlist   {   return [[[self class] alloc] init]; }
++ (instancetype)wishlist   {   return [self.class.alloc init]; }
+
++ (instancetype)copyFrom:(DAOWishlist*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
 
 - (id)init
 {
@@ -49,29 +54,29 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAOWishlist*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    if (self.item || ![copy.itemId isEqualToString:self.itemId])
+    if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {
-        copy.item  = self.item;
+        self.item   = object.item;
     }
-    copy.itemId  = self.itemId;
+    self.itemId = object.itemId;
     
-    if (self.location || ![copy.locationId isEqualToString:self.locationId])
+    if (object.location || (object.locationId && ![self.locationId isEqualToString:object.locationId]))
     {
-        copy.location  = self.location;
+        self.location   = object.location;
     }
-    copy.locationId  = self.locationId;
+    self.locationId = object.locationId;
     
-    if (self.user || ![copy.userId isEqualToString:self.userId])
+    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
     {
-        copy.user  = self.user;
+        self.user   = object.user;
     }
-    copy.userId  = self.userId;
+    self.userId = object.userId;
     
-    return copy;
+    return object;
 }
 
 @end

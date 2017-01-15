@@ -18,11 +18,11 @@
 
 #pragma mark - Object lifecycle
 
-+ (instancetype)user    {   return [[[self class] alloc] init]; }
++ (instancetype)user    {   return [self.class.alloc init]; }
 
 + (instancetype)copyFrom:(DAOUser*)object
 {
-    return [[[[self class] alloc] init] updateWith:object];
+    return [[self.class.alloc init] updateWith:object];
 }
 
 - (id)init

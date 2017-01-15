@@ -12,7 +12,12 @@
 
 #pragma mark - Object lifecycle
 
-+ (instancetype)auth   {   return [[[self class] alloc] init]; }
++ (instancetype)auth   {   return [self.class.alloc init];  }
+
++ (instancetype)copyFrom:(DAOAuth*)object
+{
+    return [[self.class.alloc init] updateWith:object];
+}
 
 - (id)init
 {
@@ -54,28 +59,28 @@
     return YES;
 }
 
-- (id)copyWithZone:(NSZone*)zone
+- (id)updateWith:(DAOAuth*)object
 {
-    typeof(self)    copy = [super copyWithZone:zone];
+    [super updateWith:object];
     
-    copy.type       = self.type;
-    copy.token      = self.token;
+    self.type       = object.type;
+    self.token      = object.token;
     
-    copy.bucketId   = self.bucketId;
-    copy.bucketName = self.bucketName;
+    self.bucketId   = object.bucketId;
+    self.bucketName = object.bucketName;
     
-    copy.accountId          = self.accountId;
-    copy.apiUrl             = self.apiUrl;
-    copy.downloadUrl        = self.downloadUrl;
-    copy.minimumPartSize    = self.minimumPartSize;
+    self.accountId          = object.accountId;
+    self.apiUrl             = object.apiUrl;
+    self.downloadUrl        = object.downloadUrl;
+    self.minimumPartSize    = object.minimumPartSize;
     
-    if (self.user || (self.userId && ![copy.userId isEqualToString:self.userId]))
+    if (self.user || (self.userId && ![self.userId isEqualToString:object.userId]))
     {
-        copy.user       = self.user;
+        self.user   = object.user;
     }
-    copy.userId     = self.userId;
+    self.userId = self.userId;
     
-    return copy;
+    return self;
 }
 
 @end
