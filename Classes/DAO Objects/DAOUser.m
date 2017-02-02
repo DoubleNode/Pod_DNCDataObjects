@@ -103,17 +103,25 @@
     
     self.myFollow       = object.myFollow;
     
+    if (object.devices || ![self.id isEqualToString:object.id])
+    {
+        self.devices  = object.devices;
+    }
     if (object.favorites || ![self.id isEqualToString:object.id])
     {
         self.favorites  = object.favorites;
     }
+    if (object.items || ![self.id isEqualToString:object.id])
+    {
+        self.items  = object.items;
+    }
+    if (object.locations || ![self.id isEqualToString:object.id])
+    {
+        self.locations  = object.locations;
+    }
     if (object.wishlists || ![self.id isEqualToString:object.id])
     {
         self.wishlists  = object.wishlists;
-    }
-    if (object.devices || ![self.id isEqualToString:object.id])
-    {
-        self.devices  = object.devices;
     }
     
     return self;

@@ -10,6 +10,8 @@
 
 @class DAOFavorite;
 @class DAOFollow;
+@class DAOItem;
+@class DAOLocation;
 @class DAOPhoto;
 @class DAOUserDevice;
 @class DAOWishlist;
@@ -75,6 +77,8 @@
 
 @property (nonatomic, copy) NSArray<DAOUserDevice*>*    devices;
 @property (nonatomic, copy) NSArray<DAOFavorite*>*      favorites;
+@property (nonatomic, copy) NSArray<DAOItem*>*          items;
+@property (nonatomic, copy) NSArray<DAOLocation*>*      locations;
 @property (nonatomic, copy) NSArray<DAOWishlist*>*      wishlists;
 
 @end
