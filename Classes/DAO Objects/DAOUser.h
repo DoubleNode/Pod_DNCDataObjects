@@ -35,6 +35,9 @@
 @property (copy, nonatomic)     NSString*       username;
 @property (copy, nonatomic)     NSString*       password;
 
+@property (copy, nonatomic)     NSString*       verifyKey;
+@property (copy, nonatomic)     NSDate*         verifiedDate;
+
 @property (copy, nonatomic)     NSString*       avatarId;
 @property (copy, nonatomic)     DAOPhoto*       avatar;
 

@@ -68,6 +68,9 @@
     self.username       = object.username;
     self.password       = object.password;
     
+    self.verifyKey      = object.verifyKey;
+    self.verifiedDate   = object.verifiedDate;
+    
     if (object.avatar || (object.avatarId && ![self.avatarId isEqualToString:object.avatarId]))
     {
         self.avatar         = object.avatar;
