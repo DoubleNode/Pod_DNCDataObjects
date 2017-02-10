@@ -106,9 +106,9 @@
     
     self.myFollow       = object.myFollow;
     
-    if (object.devices || ![self.id isEqualToString:object.id])
+    if (object.categories || ![self.id isEqualToString:object.id])
     {
-        self.devices  = object.devices;
+        self.categories  = object.categories;
     }
     if (object.favorites || ![self.id isEqualToString:object.id])
     {
@@ -125,6 +125,11 @@
     if (object.wishlists || ![self.id isEqualToString:object.id])
     {
         self.wishlists  = object.wishlists;
+    }
+
+    if (object.devices || ![self.id isEqualToString:object.id])
+    {
+        self.devices  = object.devices;
     }
     
     return self;

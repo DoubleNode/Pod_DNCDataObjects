@@ -73,14 +73,25 @@
     self.optionIds      = [object.optionIds mutableCopy];
     self.options        = [object.options mutableCopy];
     
+    if (object.categories || ![self.id isEqualToString:object.id])
+    {
+        self.categories  = object.categories;
+    }
+    if (object.favorites || ![self.id isEqualToString:object.id])
+    {
+        self.favorites  = object.favorites;
+    }
     if (object.items || ![self.id isEqualToString:object.id])
     {
         self.items  = object.items;
     }
-    
     if (object.photos || ![self.id isEqualToString:object.id])
     {
-        self.photos = object.photos;
+        self.photos  = object.photos;
+    }
+    if (object.wishlists || ![self.id isEqualToString:object.id])
+    {
+        self.wishlists  = object.wishlists;
     }
 
     if (object.socialAccounts || ![self.id isEqualToString:object.id])

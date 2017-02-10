@@ -70,32 +70,28 @@
     
     self.optionIds      = [object.optionIds mutableCopy];
     self.options        = [object.options mutableCopy];
-    
+        
     if (object.favorites || ![self.id isEqualToString:object.id])
     {
         self.favorites  = object.favorites;
     }
-    
     if (object.items || ![self.id isEqualToString:object.id])
     {
         self.items  = object.items;
     }
-    
     if (object.locations || ![self.id isEqualToString:object.id])
     {
         self.locations  = object.locations;
     }
-    
     if (object.photos || ![self.id isEqualToString:object.id])
     {
         self.photos  = object.photos;
     }
-    
     if (object.wishlists || ![self.id isEqualToString:object.id])
     {
         self.wishlists  = object.wishlists;
     }
-    
+
     return self;
 }
 

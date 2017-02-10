@@ -8,6 +8,7 @@
 
 #import "__DAOBase.h"
 
+@class DAOCategory;
 @class DAOFavorite;
 @class DAOFollow;
 @class DAOItem;
@@ -78,10 +79,12 @@
 
 @property (copy, nonatomic)     DAOFollow*  myFollow;
 
-@property (nonatomic, copy) NSArray<DAOUserDevice*>*    devices;
+@property (nonatomic, copy) NSArray<DAOCategory*>*      categories;
 @property (nonatomic, copy) NSArray<DAOFavorite*>*      favorites;
 @property (nonatomic, copy) NSArray<DAOItem*>*          items;
 @property (nonatomic, copy) NSArray<DAOLocation*>*      locations;
 @property (nonatomic, copy) NSArray<DAOWishlist*>*      wishlists;
+
+@property (nonatomic, copy) NSArray<DAOUserDevice*>*    devices;
 
 @end

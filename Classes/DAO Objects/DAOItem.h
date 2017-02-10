@@ -8,9 +8,10 @@
 
 #import "__DAOBase.h"
 
-@class DAOLocation;
+@class DAOCategory;
 @class DAOFavorite;
 @class DAOFollow;
+@class DAOLocation;
 @class DAOPhoto;
 @class DAORating;
 @class DAOReview;
@@ -48,7 +49,10 @@
 @property (copy, nonatomic)     NSMutableDictionary*    optionIds;
 @property (copy, nonatomic)     NSMutableDictionary*    options;
 
+@property (nonatomic, copy) NSArray<DAOCategory*>*  categories;
+@property (nonatomic, copy) NSArray<DAOFavorite*>*  favorites;
 @property (nonatomic, copy) NSArray<DAOLocation*>*  locations;
 @property (nonatomic, copy) NSArray<DAOPhoto*>*     photos;
+@property (nonatomic, copy) NSArray<DAOWishlist*>*  wishlists;
 
 @end
