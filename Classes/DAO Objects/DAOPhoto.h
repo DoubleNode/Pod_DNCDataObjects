@@ -8,9 +8,10 @@
 
 #import "__DAOBase.h"
 
+@class DAOCategory;
+@class DAOFavorite;
 @class DAOItem;
 @class DAOLocation;
-@class DAOFavorite;
 @class DAOReview;
 @class DAOUser;
 
@@ -28,6 +29,9 @@
 
 @property (nonatomic, copy) NSString*       userId;
 @property (nonatomic, copy) DAOUser*        user;
+
+@property (nonatomic, copy) NSString*       categoryId;
+@property (nonatomic, copy) DAOCategory*    category;
 
 @property (nonatomic, copy) NSString*       itemId;
 @property (nonatomic, copy) DAOItem*        item;

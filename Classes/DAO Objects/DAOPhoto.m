@@ -46,6 +46,7 @@
 {
     if (![super isEqualToBase:object])  {   return NO;  }
     
+    if (![object.categoryId isEqualToString:self.categoryId])   {   return NO;  }
     if (![object.itemId isEqualToString:self.itemId])           {   return NO;  }
     if (![object.locationId isEqualToString:self.locationId])   {   return NO;  }
     if (![object.reviewId isEqualToString:self.reviewId])       {   return NO;  }
@@ -61,6 +62,12 @@
     self.url            = object.url;
     self.url_preload    = object.url_preload;
     self.comment        = object.comment;
+    
+    if (object.category || (object.categoryId && ![self.categoryId isEqualToString:object.categoryId]))
+    {
+        self.category   = object.category;
+    }
+    self.itemId = object.itemId;
     
     if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {
