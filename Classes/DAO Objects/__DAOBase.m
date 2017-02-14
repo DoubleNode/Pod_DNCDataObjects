@@ -45,7 +45,7 @@
         return NO;
     }
     
-    if (!string || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@"<null>"])
+    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
     {
         return NO;
     }
@@ -85,7 +85,7 @@
         return string;
     }
     
-    if (!string || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@"<null>"])
+    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
     {
         return nil;
     }
@@ -100,7 +100,7 @@
         return (NSNumber*)number;
     }
     
-    if (!number || [number isKindOfClass:NSNull.class])
+    if (!number || ![number isKindOfClass:NSNumber.class])
     {
         return @0;
     }
@@ -127,7 +127,7 @@
         return (NSNumber*)string;
     }
     
-    if (!string || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@"<null>"])
+    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
     {
         return @0;
     }
@@ -142,7 +142,7 @@
         return string;
     }
     
-    if (!string || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@"<null>"])
+    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
     {
         return @"";
     }
@@ -169,7 +169,7 @@
         return string;
     }
     
-    if (!string || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@"<null>"])
+    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
     {
         return @"";
     }
