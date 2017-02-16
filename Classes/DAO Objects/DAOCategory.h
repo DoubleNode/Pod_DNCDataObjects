@@ -28,9 +28,12 @@
 
 @property (copy, nonatomic) NSNumber*       numCheckins;
 @property (copy, nonatomic) NSNumber*       numFavorites;
+@property (copy, nonatomic) NSNumber*       numFlags;
 @property (copy, nonatomic) NSNumber*       numFollowers;
+@property (copy, nonatomic) NSNumber*       numItems;
 @property (copy, nonatomic) NSNumber*       numRatings;
 @property (copy, nonatomic) NSNumber*       numReviews;
+@property (copy, nonatomic) NSNumber*       numTags;
 @property (copy, nonatomic) NSNumber*       numWishlists;
 
 @property (nonatomic, copy) DAOFavorite*    myFavorite;

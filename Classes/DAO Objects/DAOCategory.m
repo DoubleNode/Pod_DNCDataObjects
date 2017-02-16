@@ -55,9 +55,12 @@
     
     self.numCheckins        = object.numCheckins;
     self.numFavorites       = object.numFavorites;
+    self.numFlags           = object.numFlags;
     self.numFollowers       = object.numFollowers;
+    self.numItems           = object.numItems;
     self.numRatings         = object.numRatings;
     self.numReviews         = object.numReviews;
+    self.numTags            = object.numTags;
     self.numWishlists       = object.numWishlists;
     
     self.myFavorite         = object.myFavorite;
