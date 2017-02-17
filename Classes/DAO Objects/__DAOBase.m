@@ -32,7 +32,9 @@
     {
         self.id         = [[NSUUID UUID] UUIDString];
         self._created   = [NSDate date];
+        self._createdBy = nil;
         self._updated   = [NSDate date];
+        self._updatedBy = nil;
     }
     
     return self;
@@ -201,8 +203,10 @@
     self._status        = object._status;
     self._statusError   = object._statusError;
     self._created       = object._created;
+    self._createdBy     = object._createdBy;
     self._synced        = object._synced;
     self._updated       = object._updated;
+    self._updatedBy     = object._updatedBy;
     
     return self;
 }

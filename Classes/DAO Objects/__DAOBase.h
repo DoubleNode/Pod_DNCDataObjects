@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class DAOUser;
+
 @interface DAOBase : NSObject<NSCopying>
 
 @property (nonatomic, copy) NSString*       id;
@@ -15,8 +17,10 @@
 @property (nonatomic, copy) NSString*       _status;
 @property (nonatomic, copy) NSError*        _statusError;
 @property (nonatomic, copy) NSDate*         _created;
+@property (nonatomic, copy) DAOUser*        _createdBy;
 @property (nonatomic, copy) NSDate*         _synced;
 @property (nonatomic, copy) NSDate*         _updated;
+@property (nonatomic, copy) DAOUser*        _updatedBy;
 
 - (BOOL)boolFromString:(NSString*)string;
 
