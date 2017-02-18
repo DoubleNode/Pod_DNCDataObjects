@@ -52,6 +52,7 @@
     
     self.title              = object.title;
     self.descriptionString  = object.descriptionString;
+    self.rating             = object.rating;
     
     self.numCheckins        = object.numCheckins;
     self.numFavorites       = object.numFavorites;

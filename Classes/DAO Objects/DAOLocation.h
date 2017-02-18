@@ -34,6 +34,7 @@
 @property (nonatomic, copy) NSString*       website;
 @property (nonatomic)       NSNumber*       established;
 @property (nonatomic, copy) NSString*       mailingListURL;
+@property (nonatomic)       NSNumber*       rating;
 
 @property (nonatomic, assign, getter = isFollowing) BOOL followingFlag;
 

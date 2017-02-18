@@ -60,6 +60,7 @@
     self.website            = object.website;
     self.established        = object.established;
     self.mailingListURL     = object.mailingListURL;
+    self.rating             = object.rating;
     
     self.followingFlag      = object.followingFlag;
     

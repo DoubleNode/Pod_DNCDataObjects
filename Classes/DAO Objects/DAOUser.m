@@ -81,6 +81,7 @@
     self.handle         = object.handle;
     self.birthday       = object.birthday;
     self.location       = object.location;
+    self.rating         = object.rating;
     
     self.me             = object.me;
     

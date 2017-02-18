@@ -47,6 +47,7 @@
 @property (copy, nonatomic)     NSString*   handle;
 @property (copy, nonatomic)     NSDate*     birthday;
 @property (copy, nonatomic)     NSString*   location;
+@property (nonatomic)           NSNumber*   rating;
 
 @property (nonatomic, assign, getter = isThisMe)    BOOL    me;
 
