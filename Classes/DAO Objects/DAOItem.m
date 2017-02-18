@@ -57,12 +57,13 @@
 {
     [super updateWith:object];
     
-    self.remoteId                   = object.remoteId;
-    self.type                       = object.type;
+    self.remoteId           = object.remoteId;
+    self.type               = object.type;
     
-    self.name                       = object.name;
-    self.descriptionString          = object.descriptionString;
-    self.rating                     = object.rating;
+    self.name               = object.name;
+    self.descriptionString  = object.descriptionString;
+    self.rating             = object.rating;
+    self.defaultPhoto       = object.defaultPhoto;
     
     self.numCheckins        = object.numCheckins;
     self.numFavorites       = object.numFavorites;
