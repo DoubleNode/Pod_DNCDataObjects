@@ -60,6 +60,7 @@
     
     self.name           = object.name;
     self.extUserID      = object.extUserID;
+    self.email          = object.email;
     
     self.authSessionId  = object.authSessionId;
     self.authToken      = object.authToken;
