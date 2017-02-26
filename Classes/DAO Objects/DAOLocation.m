@@ -61,6 +61,17 @@
     self.established        = object.established;
     self.mailingListURL     = object.mailingListURL;
     self.rating             = object.rating;
+
+    self.phone              = object.phone;
+    self.address            = object.address;
+    self.address2           = object.address2;
+    self.city               = object.city;
+    self.state              = object.state;
+    self.postalCode         = object.postalCode;
+    self.country            = object.country;
+    self.geohash            = object.geohash;
+    self.latitude           = object.latitude;
+    self.longitude          = object.longitude;
     
     self.followingFlag      = object.followingFlag;
     

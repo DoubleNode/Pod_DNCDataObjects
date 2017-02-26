@@ -36,6 +36,17 @@
 @property (nonatomic, copy) NSString*       mailingListURL;
 @property (nonatomic)       NSNumber*       rating;
 
+@property (nonatomic, copy) NSString*       phone;
+@property (nonatomic, copy) NSString*       address;
+@property (nonatomic, copy) NSString*       address2;
+@property (nonatomic, copy) NSString*       city;
+@property (nonatomic, copy) NSString*       state;
+@property (nonatomic, copy) NSString*       postalCode;
+@property (nonatomic, copy) NSString*       country;
+@property (nonatomic, copy) NSString*       geohash;
+@property (copy, nonatomic) NSNumber*       latitude;
+@property (copy, nonatomic) NSNumber*       longitude;
+
 @property (nonatomic, assign, getter = isFollowing) BOOL followingFlag;
 
 @property (copy, nonatomic) NSNumber*       numCheckins;
