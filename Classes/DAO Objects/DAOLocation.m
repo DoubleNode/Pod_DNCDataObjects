@@ -61,6 +61,7 @@
     self.established        = object.established;
     self.mailingListURL     = object.mailingListURL;
     self.rating             = object.rating;
+    self.defaultPhoto       = object.defaultPhoto;
 
     self.phone              = object.phone;
     self.address            = object.address;

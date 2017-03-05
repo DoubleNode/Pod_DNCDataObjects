@@ -35,6 +35,7 @@
 @property (nonatomic)       NSNumber*       established;
 @property (nonatomic, copy) NSString*       mailingListURL;
 @property (nonatomic)       NSNumber*       rating;
+@property (nonatomic, copy) DAOPhoto*       defaultPhoto;
 
 @property (nonatomic, copy) NSString*       phone;
 @property (nonatomic, copy) NSString*       address;
