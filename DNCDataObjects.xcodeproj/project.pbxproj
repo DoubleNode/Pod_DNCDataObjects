@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1EF5070E5565A0244DCC2375 /* Pods_DNCDataObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC976DF07418E9D611772D48 /* Pods_DNCDataObjects.framework */; };
+		6A02B4D41E76145D00161A8A /* DAOFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02B4D31E76145D00161A8A /* DAOFlag.m */; };
 		6A7E0DC01DCE354C0077EC6E /* __DAOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA31DCE354C0077EC6E /* __DAOBase.m */; };
 		6A7E0DC11DCE354C0077EC6E /* DAOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA51DCE354C0077EC6E /* DAOAuth.m */; };
 		6A7E0DC21DCE354C0077EC6E /* DAOCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		310CC9D1263F8537B02AE8E1 /* Pods-DNCDataObjectsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNCDataObjectsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DNCDataObjectsTests/Pods-DNCDataObjectsTests.release.xcconfig"; sourceTree = "<group>"; };
 		3B3008ECD4738DC6679FDF26 /* Pods-DNCDataObjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNCDataObjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DNCDataObjects/Pods-DNCDataObjects.debug.xcconfig"; sourceTree = "<group>"; };
+		6A02B4D21E76145D00161A8A /* DAOFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOFlag.h; path = "Classes/DAO Objects/DAOFlag.h"; sourceTree = "<group>"; };
+		6A02B4D31E76145D00161A8A /* DAOFlag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOFlag.m; path = "Classes/DAO Objects/DAOFlag.m"; sourceTree = "<group>"; };
 		6A7E0DA21DCE354C0077EC6E /* __DAOBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = __DAOBase.h; path = "Classes/DAO Objects/__DAOBase.h"; sourceTree = "<group>"; };
 		6A7E0DA31DCE354C0077EC6E /* __DAOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = __DAOBase.m; path = "Classes/DAO Objects/__DAOBase.m"; sourceTree = "<group>"; };
 		6A7E0DA41DCE354C0077EC6E /* DAOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOAuth.h; path = "Classes/DAO Objects/DAOAuth.h"; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */,
 				6A7E0DA81DCE354C0077EC6E /* DAOFavorite.h */,
 				6A7E0DA91DCE354C0077EC6E /* DAOFavorite.m */,
+				6A02B4D21E76145D00161A8A /* DAOFlag.h */,
+				6A02B4D31E76145D00161A8A /* DAOFlag.m */,
 				6A7E0DAA1DCE354C0077EC6E /* DAOFollow.h */,
 				6A7E0DAB1DCE354C0077EC6E /* DAOFollow.m */,
 				6A7E0DAC1DCE354C0077EC6E /* DAOItem.h */,
@@ -474,6 +479,7 @@
 				6A7E0DC61DCE354C0077EC6E /* DAOLocation.m in Sources */,
 				6A81CCAC1E2B336000C4613A /* DAOCategory.m in Sources */,
 				6A7E0DC31DCE354C0077EC6E /* DAOFavorite.m in Sources */,
+				6A02B4D41E76145D00161A8A /* DAOFlag.m in Sources */,
 				6A7E0DCC1DCE354C0077EC6E /* DAOUser.m in Sources */,
 				6A7E0DC41DCE354C0077EC6E /* DAOFollow.m in Sources */,
 				6A7E0DD21DCE369A0077EC6E /* DAOActivity.m in Sources */,

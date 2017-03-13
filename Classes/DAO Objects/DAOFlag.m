@@ -1,22 +1,27 @@
 //
-//  DAOFavorite.m
+//  DAOFlag.m
 //  DoubleNode Core
 //
 //  Created by Darren Ehlers on 2016/10/16.
 //  Copyright © 2016 Darren Ehlers and DoubleNode, LLC. All rights reserved.
 //
 
-#import "DAOFavorite.h"
+#import "DAOFlag.h"
 
+#import "DAOActivity.h"
+#import "DAOCategory.h"
 #import "DAOItem.h"
 #import "DAOLocation.h"
+#import "DAOMessage.h"
+#import "DAONews.h"
+#import "DAOPhoto.h"
 #import "DAOUser.h"
 
-@implementation DAOFavorite
+@implementation DAOFlag
 
-+ (instancetype)favorite   {   return [self.class.alloc init]; }
++ (instancetype)flag   {   return [self.class.alloc init]; }
 
-+ (instancetype)copyFrom:(DAOFavorite*)object
++ (instancetype)copyFrom:(DAOFlag*)object
 {
     return [[self.class.alloc init] updateWith:object];
 }
@@ -40,15 +45,18 @@
         return NO;
     }
     
-    return [self isEqualToFavorite:object];
+    return [self isEqualToFlag:object];
 }
 
-- (BOOL)isEqualToFavorite:(DAOFavorite*)object
+- (BOOL)isEqualToFlag:(DAOFlag*)object
 {
     if (![super isEqualToBase:object])  {   return NO;  }
     
+    if (![object.activityId isEqualToString:self.activityId])   {   return NO;  }
+    if (![object.categoryId isEqualToString:self.categoryId])   {   return NO;  }
     if (![object.itemId isEqualToString:self.itemId])           {   return NO;  }
     if (![object.locationId isEqualToString:self.locationId])   {   return NO;  }
+    if (![object.messageId isEqualToString:self.messageId])     {   return NO;  }
     if (![object.newsId isEqualToString:self.newsId])           {   return NO;  }
     if (![object.photoId isEqualToString:self.photoId])         {   return NO;  }
     if (![object.userId isEqualToString:self.userId])           {   return NO;  }
@@ -56,9 +64,24 @@
     return YES;
 }
 
-- (id)updateWith:(DAOFavorite*)object
+- (id)updateWith:(DAOFlag*)object
 {
     [super updateWith:object];
+    
+    self.action = object.action;
+    self.text   = object.text;
+    
+    if (object.activity || (object.activityId && ![self.activityId isEqualToString:object.activityId]))
+    {
+        self.activity   = object.activity;
+    }
+    self.activityId = object.activityId;
+    
+    if (object.category || (object.categoryId && ![self.categoryId isEqualToString:object.categoryId]))
+    {
+        self.category   = object.category;
+    }
+    self.categoryId = object.categoryId;
     
     if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {
@@ -71,6 +94,12 @@
         self.location   = object.location;
     }
     self.locationId = object.locationId;
+    
+    if (object.message || (object.messageId && ![self.messageId isEqualToString:object.messageId]))
+    {
+        self.messageId = object.messageId;
+    }
+    self.messageId = object.messageId;
     
     if (object.news || (object.newsId && ![self.newsId isEqualToString:object.newsId]))
     {
