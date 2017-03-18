@@ -26,6 +26,7 @@
 @property (nonatomic, copy) NSString*   title;
 @property (nonatomic, copy) NSString*   descriptionString;
 @property (nonatomic)       NSNumber*   rating;
+@property (nonatomic, copy) DAOPhoto*   defaultPhoto;
 
 @property (copy, nonatomic) NSNumber*       numCheckins;
 @property (copy, nonatomic) NSNumber*       numFavorites;

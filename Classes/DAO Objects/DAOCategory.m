@@ -53,6 +53,7 @@
     self.title              = object.title;
     self.descriptionString  = object.descriptionString;
     self.rating             = object.rating;
+    self.defaultPhoto       = object.defaultPhoto;
     
     self.numCheckins        = object.numCheckins;
     self.numFavorites       = object.numFavorites;
