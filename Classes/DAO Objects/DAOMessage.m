@@ -8,6 +8,10 @@
 
 #import "DAOMessage.h"
 
+#import "DAOCategory.h"
+#import "DAOConversation.h"
+#import "DAOItem.h"
+#import "DAOLocation.h"
 #import "DAOUser.h"
 
 @implementation DAOMessage
@@ -50,13 +54,31 @@
 {
     [super updateWith:object];
     
+    self.subject    = object.subject;
     self.message    = object.message;
+    self.type       = object.type;
     
-    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
+    if (![object.conversation isEqualToConversation:self.conversation])
     {
-        self.user   = object.user;
+        self.conversation   = object.conversation;
     }
-    self.userId = object.userId;
+    
+    if (![object.fromCategory isEqualToCategory:self.fromCategory])
+    {
+        self.fromCategory   = object.fromCategory;
+    }
+    if (![object.fromItem isEqualToItem:self.fromItem])
+    {
+        self.fromItem   = object.fromItem;
+    }
+    if (![object.fromLocation isEqualToLocation:self.fromLocation])
+    {
+        self.fromLocation   = object.fromLocation;
+    }
+    if (![object.fromUser isEqualToUser:self.fromUser])
+    {
+        self.fromUser   = object.fromUser;
+    }
     
     return object;
 }

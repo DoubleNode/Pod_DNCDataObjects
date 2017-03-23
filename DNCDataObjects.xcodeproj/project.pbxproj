@@ -34,6 +34,7 @@
 		6ACFB5FD1DC9940D00CC388F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ACFB5FC1DC9940D00CC388F /* Assets.xcassets */; };
 		6ACFB6001DC9940D00CC388F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACFB5FE1DC9940D00CC388F /* LaunchScreen.storyboard */; };
 		6ACFB60B1DC9940D00CC388F /* DNCDataObjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB60A1DC9940D00CC388F /* DNCDataObjectsTests.m */; };
+		6ADEB8741E836ED900FC5FC9 /* DAOConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEB8731E836ED900FC5FC9 /* DAOConversation.m */; };
 		C09F81DD9F97694D20CCC62A /* Pods_DNCDataObjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C907570AF85D3A35080A67FA /* Pods_DNCDataObjectsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		6ACFB60C1DC9940D00CC388F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ACFB6441DC994DD00CC388F /* DNCDataObjects.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DNCDataObjects.podspec; sourceTree = "<group>"; };
 		6ACFB6451DC994DD00CC388F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6ADEB8721E836ED900FC5FC9 /* DAOConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOConversation.h; path = "Classes/DAO Objects/DAOConversation.h"; sourceTree = "<group>"; };
+		6ADEB8731E836ED900FC5FC9 /* DAOConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOConversation.m; path = "Classes/DAO Objects/DAOConversation.m"; sourceTree = "<group>"; };
 		7E0CA165ECE9DDBE092EA62E /* Pods-DNCDataObjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNCDataObjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-DNCDataObjects/Pods-DNCDataObjects.release.xcconfig"; sourceTree = "<group>"; };
 		C907570AF85D3A35080A67FA /* Pods_DNCDataObjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNCDataObjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC976DF07418E9D611772D48 /* Pods_DNCDataObjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNCDataObjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +154,8 @@
 				6A81CCAB1E2B336000C4613A /* DAOCategory.m */,
 				6A7E0DA61DCE354C0077EC6E /* DAOCheckin.h */,
 				6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */,
+				6ADEB8721E836ED900FC5FC9 /* DAOConversation.h */,
+				6ADEB8731E836ED900FC5FC9 /* DAOConversation.m */,
 				6A7E0DA81DCE354C0077EC6E /* DAOFavorite.h */,
 				6A7E0DA91DCE354C0077EC6E /* DAOFavorite.m */,
 				6A02B4D21E76145D00161A8A /* DAOFlag.h */,
@@ -491,6 +496,7 @@
 				6A7E0DCA1DCE354C0077EC6E /* DAORating.m in Sources */,
 				6A7E0DC71DCE354C0077EC6E /* DAOMessage.m in Sources */,
 				6A7E0DC91DCE354C0077EC6E /* DAOPhoto.m in Sources */,
+				6ADEB8741E836ED900FC5FC9 /* DAOConversation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
