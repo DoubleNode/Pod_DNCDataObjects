@@ -35,6 +35,10 @@
 		6ACFB6001DC9940D00CC388F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ACFB5FE1DC9940D00CC388F /* LaunchScreen.storyboard */; };
 		6ACFB60B1DC9940D00CC388F /* DNCDataObjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ACFB60A1DC9940D00CC388F /* DNCDataObjectsTests.m */; };
 		6ADEB8741E836ED900FC5FC9 /* DAOConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ADEB8731E836ED900FC5FC9 /* DAOConversation.m */; };
+		6AE4B0551E8609FE0051EF08 /* DAOContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B0541E8609FE0051EF08 /* DAOContact.m */; };
+		6AE4B0581E860A130051EF08 /* DAONotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B0571E860A130051EF08 /* DAONotification.m */; };
+		6AE4B05B1E860A230051EF08 /* DAOPaymentAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B05A1E860A230051EF08 /* DAOPaymentAccount.m */; };
+		6AE4B05E1E860A320051EF08 /* DAOTransmission.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4B05D1E860A320051EF08 /* DAOTransmission.m */; };
 		C09F81DD9F97694D20CCC62A /* Pods_DNCDataObjectsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C907570AF85D3A35080A67FA /* Pods_DNCDataObjectsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +110,14 @@
 		6ACFB6451DC994DD00CC388F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6ADEB8721E836ED900FC5FC9 /* DAOConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOConversation.h; path = "Classes/DAO Objects/DAOConversation.h"; sourceTree = "<group>"; };
 		6ADEB8731E836ED900FC5FC9 /* DAOConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOConversation.m; path = "Classes/DAO Objects/DAOConversation.m"; sourceTree = "<group>"; };
+		6AE4B0531E8609FE0051EF08 /* DAOContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOContact.h; path = "Classes/DAO Objects/DAOContact.h"; sourceTree = "<group>"; };
+		6AE4B0541E8609FE0051EF08 /* DAOContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOContact.m; path = "Classes/DAO Objects/DAOContact.m"; sourceTree = "<group>"; };
+		6AE4B0561E860A130051EF08 /* DAONotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAONotification.h; path = "Classes/DAO Objects/DAONotification.h"; sourceTree = "<group>"; };
+		6AE4B0571E860A130051EF08 /* DAONotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAONotification.m; path = "Classes/DAO Objects/DAONotification.m"; sourceTree = "<group>"; };
+		6AE4B0591E860A230051EF08 /* DAOPaymentAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOPaymentAccount.h; path = "Classes/DAO Objects/DAOPaymentAccount.h"; sourceTree = "<group>"; };
+		6AE4B05A1E860A230051EF08 /* DAOPaymentAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOPaymentAccount.m; path = "Classes/DAO Objects/DAOPaymentAccount.m"; sourceTree = "<group>"; };
+		6AE4B05C1E860A320051EF08 /* DAOTransmission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOTransmission.h; path = "Classes/DAO Objects/DAOTransmission.h"; sourceTree = "<group>"; };
+		6AE4B05D1E860A320051EF08 /* DAOTransmission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOTransmission.m; path = "Classes/DAO Objects/DAOTransmission.m"; sourceTree = "<group>"; };
 		7E0CA165ECE9DDBE092EA62E /* Pods-DNCDataObjects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNCDataObjects.release.xcconfig"; path = "Pods/Target Support Files/Pods-DNCDataObjects/Pods-DNCDataObjects.release.xcconfig"; sourceTree = "<group>"; };
 		C907570AF85D3A35080A67FA /* Pods_DNCDataObjectsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNCDataObjectsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC976DF07418E9D611772D48 /* Pods_DNCDataObjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNCDataObjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +166,8 @@
 				6A81CCAB1E2B336000C4613A /* DAOCategory.m */,
 				6A7E0DA61DCE354C0077EC6E /* DAOCheckin.h */,
 				6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */,
+				6AE4B0531E8609FE0051EF08 /* DAOContact.h */,
+				6AE4B0541E8609FE0051EF08 /* DAOContact.m */,
 				6ADEB8721E836ED900FC5FC9 /* DAOConversation.h */,
 				6ADEB8731E836ED900FC5FC9 /* DAOConversation.m */,
 				6A7E0DA81DCE354C0077EC6E /* DAOFavorite.h */,
@@ -168,8 +182,12 @@
 				6A7E0DAF1DCE354C0077EC6E /* DAOLocation.m */,
 				6A7E0DB01DCE354C0077EC6E /* DAOMessage.h */,
 				6A7E0DB11DCE354C0077EC6E /* DAOMessage.m */,
+				6AE4B0561E860A130051EF08 /* DAONotification.h */,
+				6AE4B0571E860A130051EF08 /* DAONotification.m */,
 				6A7E0DB21DCE354C0077EC6E /* DAONews.h */,
 				6A7E0DB31DCE354C0077EC6E /* DAONews.m */,
+				6AE4B0591E860A230051EF08 /* DAOPaymentAccount.h */,
+				6AE4B05A1E860A230051EF08 /* DAOPaymentAccount.m */,
 				6A7E0DB41DCE354C0077EC6E /* DAOPhoto.h */,
 				6A7E0DB51DCE354C0077EC6E /* DAOPhoto.m */,
 				6A7E0DB61DCE354C0077EC6E /* DAORating.h */,
@@ -178,6 +196,8 @@
 				6A7E0DB91DCE354C0077EC6E /* DAOReview.m */,
 				6A81CC971E2AD6E800C4613A /* DAOSocialAccount.h */,
 				6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */,
+				6AE4B05C1E860A320051EF08 /* DAOTransmission.h */,
+				6AE4B05D1E860A320051EF08 /* DAOTransmission.m */,
 				6A7E0DBA1DCE354C0077EC6E /* DAOUser.h */,
 				6A7E0DBB1DCE354C0077EC6E /* DAOUser.m */,
 				6A7E0DBC1DCE354C0077EC6E /* DAOUserDevice.h */,
@@ -475,7 +495,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ACFB5F81DC9940D00CC388F /* ViewController.m in Sources */,
+				6AE4B0581E860A130051EF08 /* DAONotification.m in Sources */,
 				6ACFB5F51DC9940D00CC388F /* AppDelegate.m in Sources */,
+				6AE4B05B1E860A230051EF08 /* DAOPaymentAccount.m in Sources */,
 				6A7E0DC21DCE354C0077EC6E /* DAOCheckin.m in Sources */,
 				6A7E0DCD1DCE354C0077EC6E /* DAOUserDevice.m in Sources */,
 				6A7E0DC51DCE354C0077EC6E /* DAOItem.m in Sources */,
@@ -484,11 +506,13 @@
 				6A7E0DC61DCE354C0077EC6E /* DAOLocation.m in Sources */,
 				6A81CCAC1E2B336000C4613A /* DAOCategory.m in Sources */,
 				6A7E0DC31DCE354C0077EC6E /* DAOFavorite.m in Sources */,
+				6AE4B05E1E860A320051EF08 /* DAOTransmission.m in Sources */,
 				6A02B4D41E76145D00161A8A /* DAOFlag.m in Sources */,
 				6A7E0DCC1DCE354C0077EC6E /* DAOUser.m in Sources */,
 				6A7E0DC41DCE354C0077EC6E /* DAOFollow.m in Sources */,
 				6A7E0DD21DCE369A0077EC6E /* DAOActivity.m in Sources */,
 				6A7E0DC01DCE354C0077EC6E /* __DAOBase.m in Sources */,
+				6AE4B0551E8609FE0051EF08 /* DAOContact.m in Sources */,
 				6A7E0DCB1DCE354C0077EC6E /* DAOReview.m in Sources */,
 				6A7E0DC81DCE354C0077EC6E /* DAONews.m in Sources */,
 				6A7E0DCE1DCE354C0077EC6E /* DAOWishlist.m in Sources */,

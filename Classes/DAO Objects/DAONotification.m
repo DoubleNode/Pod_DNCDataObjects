@@ -1,18 +1,20 @@
 //
-//  DAOConversation.m
+//  DAONotification.m
 //  DoubleNode Core
 //
 //  Created by Darren Ehlers on 2016/10/16.
 //  Copyright © 2016 Darren Ehlers and DoubleNode, LLC. All rights reserved.
 //
 
-#import "DAOConversation.h"
+#import "DAONotification.h"
 
-@implementation DAOConversation
+#import "DAOUser.h"
 
-+ (instancetype)conversation    {   return [self.class.alloc init]; }
+@implementation DAONotification
 
-+ (instancetype)copyFrom:(DAOConversation*)object
++ (instancetype)notification    {   return [self.class.alloc init]; }
+
++ (instancetype)copyFrom:(DAONotification*)object
 {
     return [[self.class.alloc init] updateWith:object];
 }
@@ -34,24 +36,25 @@
         return NO;
     }
     
-    return [self isEqualToConversation:object];
+    return [self isEqualToNotification:object];
 }
 
-- (BOOL)isEqualToConversation:(DAOConversation*)object
+- (BOOL)isEqualToNotification:(DAONotification*)object
 {
     if (![super isEqualToBase:object])  {   return NO;  }
     
     return YES;
 }
 
-- (id)updateWith:(DAOConversation*)object
+- (id)updateWith:(DAONotification*)object
 {
     [super updateWith:object];
     
-    self.categories = object.categories;
-    self.items      = object.items;
-    self.locations  = object.locations;
-    self.users      = object.users;
+    self.type   = object.type;
+    self.data   = object.data;
+
+    self.userId     = object.userId;
+    self.user       = object.user;
     
     return object;
 }
