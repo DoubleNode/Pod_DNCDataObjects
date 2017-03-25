@@ -16,10 +16,10 @@
 
 - (BOOL)isEqualToUserDevice:(DAOUserDevice*)object;
 
-@property (copy, nonatomic)     NSString*   deviceId;
-@property (copy, nonatomic)     NSString*   deviceType;
+@property (nonatomic, copy)     NSString*   deviceId;
+@property (nonatomic, copy)     NSString*   deviceType;
 
-@property (copy, nonatomic)     NSString*   userId;
-@property (copy, nonatomic)     DAOUser*    user;
+@property (nonatomic, copy)     NSString*   userId;
+@property (nonatomic, copy)     DAOUser*    user;
 
 @end

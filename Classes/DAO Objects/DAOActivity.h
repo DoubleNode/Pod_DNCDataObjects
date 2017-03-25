@@ -77,7 +77,7 @@ extern NSString* const kActivityTypePhoto;
 @property (nonatomic, copy) NSString*       userId;
 @property (nonatomic, copy) DAOUser*        user;
 
-@property (copy, nonatomic) NSNumber*       numFavorites;
+@property (nonatomic, copy) NSNumber*       numFavorites;
 
 @property (nonatomic, copy) DAOFavorite*    myFavorite;
 

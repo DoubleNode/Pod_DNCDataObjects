@@ -9,6 +9,7 @@
 #import "__DAOBase.h"
 
 @class DAOCategory;
+@class DAOContact;
 @class DAOFavorite;
 @class DAOFollow;
 @class DAOItem;
@@ -26,59 +27,62 @@
 
 - (id)updateWith:(DAOUser*)object;
 
-@property (copy, nonatomic)     NSString*   email;
-@property (copy, nonatomic)     NSString*   extUserID;
+@property (nonatomic, copy)     NSString*   email;
+@property (nonatomic, copy)     NSString*   extUserID;
 
-@property (copy, nonatomic)     NSString*       authSessionId;
-@property (copy, nonatomic)     NSString*       authToken;
-@property (copy, nonatomic)     NSDictionary*   authData;
-@property (copy, nonatomic)     NSString*       authType;
-@property (copy, nonatomic)     NSString*       username;
-@property (copy, nonatomic)     NSString*       password;
+@property (nonatomic, copy)     NSString*       authSessionId;
+@property (nonatomic, copy)     NSString*       authToken;
+@property (nonatomic, copy)     NSDictionary*   authData;
+@property (nonatomic, copy)     NSString*       authType;
+@property (nonatomic, copy)     NSString*       username;
+@property (nonatomic, copy)     NSString*       password;
 
-@property (copy, nonatomic)     NSString*       verifyKey;
-@property (copy, nonatomic)     NSDate*         verifiedDate;
+@property (nonatomic, copy)     NSString*       verifyKey;
+@property (nonatomic, copy)     NSDate*         verifiedDate;
 
-@property (copy, nonatomic)     NSString*       avatarId;
-@property (copy, nonatomic)     DAOPhoto*       avatar;
+@property (nonatomic, copy)     NSString*       avatarId;
+@property (nonatomic, copy)     DAOPhoto*       avatar;
 
-@property (copy, nonatomic)     NSString*   phoneNumber;
-@property (copy, nonatomic)     NSString*   name;
-@property (copy, nonatomic)     NSString*   handle;
-@property (copy, nonatomic)     NSDate*     birthday;
-@property (copy, nonatomic)     NSString*   location;
-@property (nonatomic)           NSNumber*   rating;
+@property (nonatomic, copy)     NSString*       contactId;
+@property (nonatomic, copy)     DAOContact*     contact;
+
+@property (nonatomic, copy)     NSString*   phoneNumber;
+@property (nonatomic, copy)     NSString*   name;
+@property (nonatomic, copy)     NSString*   handle;
+@property (nonatomic, copy)     NSDate*     birthday;
+@property (nonatomic, copy)     NSString*   location;
+@property (nonatomic, copy)     NSNumber*   rating;
 
 @property (nonatomic, assign, getter = isThisMe)    BOOL    me;
 
-@property (copy, nonatomic)     NSNumber*   numUsersFollowing;
-@property (copy, nonatomic)     NSNumber*   numUsersFollowers;
+@property (nonatomic, copy)     NSNumber*   numUsersFollowing;
+@property (nonatomic, copy)     NSNumber*   numUsersFollowers;
 
-@property (copy, nonatomic)     NSNumber*   numCategoriesCheckins;
-@property (copy, nonatomic)     NSNumber*   numCategoriesFavorites;
-@property (copy, nonatomic)     NSNumber*   numCategoriesFollowers;
-@property (copy, nonatomic)     NSNumber*   numCategoriesRatings;
-@property (copy, nonatomic)     NSNumber*   numCategoriesReviews;
-@property (copy, nonatomic)     NSNumber*   numCategoriesWishlists;
+@property (nonatomic, copy)     NSNumber*   numCategoriesCheckins;
+@property (nonatomic, copy)     NSNumber*   numCategoriesFavorites;
+@property (nonatomic, copy)     NSNumber*   numCategoriesFollowers;
+@property (nonatomic, copy)     NSNumber*   numCategoriesRatings;
+@property (nonatomic, copy)     NSNumber*   numCategoriesReviews;
+@property (nonatomic, copy)     NSNumber*   numCategoriesWishlists;
 
-@property (copy, nonatomic)     NSNumber*   numItemsCheckins;
-@property (copy, nonatomic)     NSNumber*   numItemsFavorites;
-@property (copy, nonatomic)     NSNumber*   numItemsFollowers;
-@property (copy, nonatomic)     NSNumber*   numItemsRatings;
-@property (copy, nonatomic)     NSNumber*   numItemsReviews;
-@property (copy, nonatomic)     NSNumber*   numItemsWishlists;
+@property (nonatomic, copy)     NSNumber*   numItemsCheckins;
+@property (nonatomic, copy)     NSNumber*   numItemsFavorites;
+@property (nonatomic, copy)     NSNumber*   numItemsFollowers;
+@property (nonatomic, copy)     NSNumber*   numItemsRatings;
+@property (nonatomic, copy)     NSNumber*   numItemsReviews;
+@property (nonatomic, copy)     NSNumber*   numItemsWishlists;
 
-@property (copy, nonatomic)     NSNumber*   numLocationsCheckins;
-@property (copy, nonatomic)     NSNumber*   numLocationsFavorites;
-@property (copy, nonatomic)     NSNumber*   numLocationsFollowers;
-@property (copy, nonatomic)     NSNumber*   numLocationsRatings;
-@property (copy, nonatomic)     NSNumber*   numLocationsReviews;
-@property (copy, nonatomic)     NSNumber*   numLocationsWishlists;
+@property (nonatomic, copy)     NSNumber*   numLocationsCheckins;
+@property (nonatomic, copy)     NSNumber*   numLocationsFavorites;
+@property (nonatomic, copy)     NSNumber*   numLocationsFollowers;
+@property (nonatomic, copy)     NSNumber*   numLocationsRatings;
+@property (nonatomic, copy)     NSNumber*   numLocationsReviews;
+@property (nonatomic, copy)     NSNumber*   numLocationsWishlists;
 
-@property (copy, nonatomic)     NSMutableDictionary*    optionIds;
-@property (copy, nonatomic)     NSMutableDictionary*    options;
+@property (nonatomic, copy)     NSMutableDictionary*    optionIds;
+@property (nonatomic, copy)     NSMutableDictionary*    options;
 
-@property (copy, nonatomic)     DAOFollow*  myFollow;
+@property (nonatomic, copy)     DAOFollow*  myFollow;
 
 @property (nonatomic, copy) NSArray<DAOCategory*>*      categories;
 @property (nonatomic, copy) NSArray<DAOFavorite*>*      favorites;

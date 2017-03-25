@@ -8,12 +8,6 @@
 
 #import "DAOUser.h"
 
-#import "DAOFavorite.h"
-#import "DAOFollow.h"
-#import "DAOPhoto.h"
-#import "DAOUserDevice.h"
-#import "DAOWishlist.h"
-
 @implementation DAOUser
 
 #pragma mark - Object lifecycle
@@ -74,9 +68,15 @@
     
     if (object.avatar || (object.avatarId && ![self.avatarId isEqualToString:object.avatarId]))
     {
-        self.avatar         = object.avatar;
+        self.avatar     = object.avatar;
     }
     self.avatarId       = object.avatarId;
+    
+    if (object.contact || (object.contactId && ![self.contactId isEqualToString:object.contactId]))
+    {
+        self.contact    = object.contact;
+    }
+    self.contactId      = object.contactId;
     
     self.phoneNumber    = object.phoneNumber;
     self.handle         = object.handle;

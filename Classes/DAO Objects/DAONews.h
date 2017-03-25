@@ -24,7 +24,7 @@
 
 @property (nonatomic, copy) NSDate*     expiration;
 
-@property (copy, nonatomic) NSNumber*       numFavorites;
+@property (nonatomic, copy) NSNumber*       numFavorites;
 
 @property (nonatomic, copy) DAOFavorite*    myFavorite;
 

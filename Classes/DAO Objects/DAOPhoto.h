@@ -42,7 +42,7 @@
 @property (nonatomic, copy) NSString*       reviewId;
 @property (nonatomic, copy) DAOReview*      review;
 
-@property (copy, nonatomic) NSNumber*       numFavorites;
+@property (nonatomic, copy) NSNumber*       numFavorites;
 
 @property (nonatomic, copy) DAOFavorite*    myFavorite;
 

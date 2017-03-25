@@ -34,12 +34,12 @@
 @property (nonatomic)       NSNumber*       rating;
 @property (nonatomic, copy) DAOPhoto*       defaultPhoto;
 
-@property (copy, nonatomic) NSNumber*       numCheckins;
-@property (copy, nonatomic) NSNumber*       numFavorites;
-@property (copy, nonatomic) NSNumber*       numFollowers;
-@property (copy, nonatomic) NSNumber*       numRatings;
-@property (copy, nonatomic) NSNumber*       numReviews;
-@property (copy, nonatomic) NSNumber*       numWishlists;
+@property (nonatomic, copy) NSNumber*       numCheckins;
+@property (nonatomic, copy) NSNumber*       numFavorites;
+@property (nonatomic, copy) NSNumber*       numFollowers;
+@property (nonatomic, copy) NSNumber*       numRatings;
+@property (nonatomic, copy) NSNumber*       numReviews;
+@property (nonatomic, copy) NSNumber*       numWishlists;
 
 @property (nonatomic, copy) DAOFavorite*    myFavorite;
 @property (nonatomic, copy) DAOFollow*      myFollow;
@@ -47,8 +47,8 @@
 @property (nonatomic, copy) DAOReview*      myReview;
 @property (nonatomic, copy) DAOWishlist*    myWishlist;
 
-@property (copy, nonatomic)     NSMutableDictionary*    optionIds;
-@property (copy, nonatomic)     NSMutableDictionary*    options;
+@property (nonatomic, copy)     NSMutableDictionary*    optionIds;
+@property (nonatomic, copy)     NSMutableDictionary*    options;
 
 @property (nonatomic, copy) NSArray<DAOCategory*>*  categories;
 @property (nonatomic, copy) NSArray<DAOFavorite*>*  favorites;
