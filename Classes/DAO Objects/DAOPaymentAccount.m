@@ -55,7 +55,7 @@
     self.name           = object.name;
     self.accountNumber  = object.accountNumber;
     self.expirationDate = object.expirationDate;
-    self.ccv            = object.ccv;
+    self.cvv            = object.cvv;
     
     self.contactId  = object.contactId;
     self.contact    = object.contact;

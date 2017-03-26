@@ -21,7 +21,7 @@
 @property (nonatomic, copy) NSString*       name;
 @property (nonatomic, copy) NSString*       accountNumber;
 @property (nonatomic, copy) NSDate*         expirationDate;
-@property (nonatomic, copy) NSString*       ccv;
+@property (nonatomic, copy) NSString*       cvv;
 
 @property (nonatomic, copy) NSString*       contactId;
 @property (nonatomic, copy) DAOContact*     contact;
