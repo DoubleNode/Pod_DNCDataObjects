@@ -19,6 +19,7 @@
 
 @property (nonatomic, copy) NSString*       type;
 @property (nonatomic, copy) NSString*       name;
+@property (nonatomic, copy) NSString*       accountToken;
 @property (nonatomic, copy) NSString*       accountNumber;
 @property (nonatomic, copy) NSDate*         expirationDate;
 @property (nonatomic, copy) NSString*       cvv;
