@@ -48,6 +48,12 @@
 {
     [super updateWith:object];
     
+    self.numMessages        = object.numMessages;
+    self.numUnreadMessages  = object.numUnreadMessages;
+    
+    self.lastRead   = object.lastRead;
+    self.messages   = object.messages;
+    
     self.categories = object.categories;
     self.items      = object.items;
     self.locations  = object.locations;

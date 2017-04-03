@@ -11,6 +11,7 @@
 @class DAOCategory;
 @class DAOItem;
 @class DAOLocation;
+@class DAOMessage;
 @class DAOUser;
 
 @interface DAOConversation : DAOBase
@@ -18,6 +19,12 @@
 + (instancetype)conversation;
 
 - (BOOL)isEqualToConversation:(DAOConversation*)object;
+
+@property (nonatomic, copy) NSNumber*   numMessages;
+@property (nonatomic, copy) NSNumber*   numUnreadMessages;
+
+@property (nonatomic, copy) NSDate*                 lastRead;
+@property (nonatomic, copy) NSArray<DAOMessage*>*   messages;
 
 @property (nonatomic, copy) NSArray<DAOCategory*>*  categories;
 @property (nonatomic, copy) NSArray<DAOItem*>*      items;
