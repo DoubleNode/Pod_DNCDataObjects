@@ -24,6 +24,7 @@
 
 - (BOOL)boolFromString:(NSString*)string;
 
+- (NSDate*)dateFromNumber:(NSNumber*)number;
 - (NSDate*)dateFromString:(NSString*)string;
 
 - (NSString*)idFromString:(NSString*)string;

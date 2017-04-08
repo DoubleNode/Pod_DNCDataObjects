@@ -65,6 +65,16 @@
     return [[string substringToIndex:1] isEqualToString:@"Y"];
 }
 
+- (NSDate*)dateFromNumber:(NSNumber*)number
+{
+    if ([number isKindOfClass:[NSDate class]])
+    {
+        return (NSDate*)number;
+    }
+
+    return [NSDate dateWithTimeIntervalSinceReferenceDate:number.doubleValue];
+}
+
 - (NSDate*)dateFromString:(NSString*)string
 {
     if ([string isKindOfClass:[NSDate class]])
