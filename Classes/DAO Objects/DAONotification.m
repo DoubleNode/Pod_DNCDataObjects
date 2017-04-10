@@ -50,8 +50,9 @@
 {
     [super updateWith:object];
     
-    self.type   = object.type;
-    self.data   = object.data;
+    self.type           = object.type;
+    self.data           = object.data;
+    self.disposition    = object.disposition;
 
     self.userId     = object.userId;
     self.user       = object.user;

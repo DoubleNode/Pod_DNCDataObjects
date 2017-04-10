@@ -18,6 +18,7 @@
 
 @property (nonatomic, copy) NSString*       type;
 @property (nonatomic, copy) NSDictionary*   data;
+@property (nonatomic, copy) NSString*       disposition;
 
 @property (nonatomic, copy) NSString*       userId;
 @property (nonatomic, copy) DAOUser*        user;
