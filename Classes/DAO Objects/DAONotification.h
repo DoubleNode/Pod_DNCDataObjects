@@ -19,7 +19,7 @@
 
 - (BOOL)isEqualToNotification:(DAONotification*)object;
 
-@property (nonatomic, copy) NSString*       key;
+@property (nonatomic, copy) NSString*       keycode;
 @property (nonatomic, copy) NSDictionary*   data;
 @property (nonatomic, copy) NSString*       disposition;
 

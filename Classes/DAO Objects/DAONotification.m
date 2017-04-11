@@ -53,7 +53,7 @@
 {
     [super updateWith:object];
     
-    self.key            = object.key;
+    self.keycode        = object.keycode;
     self.data           = object.data;
     self.disposition    = object.disposition;
     
