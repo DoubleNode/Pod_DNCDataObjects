@@ -50,12 +50,33 @@
 {
     [super updateWith:object];
     
-    self.type           = object.type;
+    self.key            = object.key;
     self.data           = object.data;
     self.disposition    = object.disposition;
-
-    self.userId     = object.userId;
-    self.user       = object.user;
+    
+    if (object.category || (object.categoryId && ![self.categoryId isEqualToString:object.categoryId]))
+    {
+        self.category   = object.category;
+    }
+    self.categoryId = object.categoryId;
+    
+    if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
+    {
+        self.item   = object.item;
+    }
+    self.itemId = object.itemId;
+    
+    if (object.location || (object.locationId && ![self.locationId isEqualToString:object.locationId]))
+    {
+        self.location   = object.location;
+    }
+    self.locationId = object.locationId;
+    
+    if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
+    {
+        self.user   = object.user;
+    }
+    self.userId = object.userId;
     
     return object;
 }
