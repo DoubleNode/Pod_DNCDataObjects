@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1EF5070E5565A0244DCC2375 /* Pods_DNCDataObjects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC976DF07418E9D611772D48 /* Pods_DNCDataObjects.framework */; };
 		6A02B4D41E76145D00161A8A /* DAOFlag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02B4D31E76145D00161A8A /* DAOFlag.m */; };
+		6A02DF201EA3E80A00705754 /* DAOOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02DF1F1EA3E80A00705754 /* DAOOrder.m */; };
+		6A02DF231EA3E81300705754 /* DAOTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02DF221EA3E81200705754 /* DAOTransaction.m */; };
+		6A02DF261EA3E81D00705754 /* DAOLineitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02DF251EA3E81D00705754 /* DAOLineitem.m */; };
 		6A7E0DC01DCE354C0077EC6E /* __DAOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA31DCE354C0077EC6E /* __DAOBase.m */; };
 		6A7E0DC11DCE354C0077EC6E /* DAOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA51DCE354C0077EC6E /* DAOAuth.m */; };
 		6A7E0DC21DCE354C0077EC6E /* DAOCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */; };
@@ -57,6 +60,12 @@
 		3B3008ECD4738DC6679FDF26 /* Pods-DNCDataObjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DNCDataObjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DNCDataObjects/Pods-DNCDataObjects.debug.xcconfig"; sourceTree = "<group>"; };
 		6A02B4D21E76145D00161A8A /* DAOFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOFlag.h; path = "Classes/DAO Objects/DAOFlag.h"; sourceTree = "<group>"; };
 		6A02B4D31E76145D00161A8A /* DAOFlag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOFlag.m; path = "Classes/DAO Objects/DAOFlag.m"; sourceTree = "<group>"; };
+		6A02DF1E1EA3E80A00705754 /* DAOOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOOrder.h; path = "Classes/DAO Objects/DAOOrder.h"; sourceTree = "<group>"; };
+		6A02DF1F1EA3E80A00705754 /* DAOOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOOrder.m; path = "Classes/DAO Objects/DAOOrder.m"; sourceTree = "<group>"; };
+		6A02DF211EA3E81200705754 /* DAOTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOTransaction.h; path = "Classes/DAO Objects/DAOTransaction.h"; sourceTree = "<group>"; };
+		6A02DF221EA3E81200705754 /* DAOTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOTransaction.m; path = "Classes/DAO Objects/DAOTransaction.m"; sourceTree = "<group>"; };
+		6A02DF241EA3E81D00705754 /* DAOLineitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOLineitem.h; path = "Classes/DAO Objects/DAOLineitem.h"; sourceTree = "<group>"; };
+		6A02DF251EA3E81D00705754 /* DAOLineitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOLineitem.m; path = "Classes/DAO Objects/DAOLineitem.m"; sourceTree = "<group>"; };
 		6A7E0DA21DCE354C0077EC6E /* __DAOBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = __DAOBase.h; path = "Classes/DAO Objects/__DAOBase.h"; sourceTree = "<group>"; };
 		6A7E0DA31DCE354C0077EC6E /* __DAOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = __DAOBase.m; path = "Classes/DAO Objects/__DAOBase.m"; sourceTree = "<group>"; };
 		6A7E0DA41DCE354C0077EC6E /* DAOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOAuth.h; path = "Classes/DAO Objects/DAOAuth.h"; sourceTree = "<group>"; };
@@ -178,6 +187,8 @@
 				6A7E0DAB1DCE354C0077EC6E /* DAOFollow.m */,
 				6A7E0DAC1DCE354C0077EC6E /* DAOItem.h */,
 				6A7E0DAD1DCE354C0077EC6E /* DAOItem.m */,
+				6A02DF241EA3E81D00705754 /* DAOLineitem.h */,
+				6A02DF251EA3E81D00705754 /* DAOLineitem.m */,
 				6A7E0DAE1DCE354C0077EC6E /* DAOLocation.h */,
 				6A7E0DAF1DCE354C0077EC6E /* DAOLocation.m */,
 				6A7E0DB01DCE354C0077EC6E /* DAOMessage.h */,
@@ -186,6 +197,8 @@
 				6A7E0DB31DCE354C0077EC6E /* DAONews.m */,
 				6AE4B0561E860A130051EF08 /* DAONotification.h */,
 				6AE4B0571E860A130051EF08 /* DAONotification.m */,
+				6A02DF1E1EA3E80A00705754 /* DAOOrder.h */,
+				6A02DF1F1EA3E80A00705754 /* DAOOrder.m */,
 				6AE4B0591E860A230051EF08 /* DAOPaymentAccount.h */,
 				6AE4B05A1E860A230051EF08 /* DAOPaymentAccount.m */,
 				6A7E0DB41DCE354C0077EC6E /* DAOPhoto.h */,
@@ -196,6 +209,8 @@
 				6A7E0DB91DCE354C0077EC6E /* DAOReview.m */,
 				6A81CC971E2AD6E800C4613A /* DAOSocialAccount.h */,
 				6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */,
+				6A02DF211EA3E81200705754 /* DAOTransaction.h */,
+				6A02DF221EA3E81200705754 /* DAOTransaction.m */,
 				6AE4B05C1E860A320051EF08 /* DAOTransmission.h */,
 				6AE4B05D1E860A320051EF08 /* DAOTransmission.m */,
 				6A7E0DBA1DCE354C0077EC6E /* DAOUser.h */,
@@ -507,8 +522,10 @@
 				6A81CCAC1E2B336000C4613A /* DAOCategory.m in Sources */,
 				6A7E0DC31DCE354C0077EC6E /* DAOFavorite.m in Sources */,
 				6AE4B05E1E860A320051EF08 /* DAOTransmission.m in Sources */,
+				6A02DF201EA3E80A00705754 /* DAOOrder.m in Sources */,
 				6A02B4D41E76145D00161A8A /* DAOFlag.m in Sources */,
 				6A7E0DCC1DCE354C0077EC6E /* DAOUser.m in Sources */,
+				6A02DF231EA3E81300705754 /* DAOTransaction.m in Sources */,
 				6A7E0DC41DCE354C0077EC6E /* DAOFollow.m in Sources */,
 				6A7E0DD21DCE369A0077EC6E /* DAOActivity.m in Sources */,
 				6A7E0DC01DCE354C0077EC6E /* __DAOBase.m in Sources */,
@@ -517,6 +534,7 @@
 				6A7E0DC81DCE354C0077EC6E /* DAONews.m in Sources */,
 				6A7E0DCE1DCE354C0077EC6E /* DAOWishlist.m in Sources */,
 				6A7E0DC11DCE354C0077EC6E /* DAOAuth.m in Sources */,
+				6A02DF261EA3E81D00705754 /* DAOLineitem.m in Sources */,
 				6A7E0DCA1DCE354C0077EC6E /* DAORating.m in Sources */,
 				6A7E0DC71DCE354C0077EC6E /* DAOMessage.m in Sources */,
 				6A7E0DC91DCE354C0077EC6E /* DAOPhoto.m in Sources */,
