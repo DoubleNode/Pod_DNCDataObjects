@@ -83,6 +83,7 @@
     self.discount   = object.discount;
     self.tax        = object.tax;
     self.total      = object.total;
+    self.data       = object.data;
     
     self.paymentType    = object.paymentType;
     self.paymentData    = object.paymentData;

@@ -38,6 +38,7 @@
 @property (nonatomic, copy) NSNumber*       discount;
 @property (nonatomic, copy) NSNumber*       tax;
 @property (nonatomic, copy) NSNumber*       total;
+@property (nonatomic, copy) NSDictionary*   data;
 
 @property (nonatomic, copy) NSString*       paymentType;
 @property (nonatomic, copy) NSDictionary*   paymentData;

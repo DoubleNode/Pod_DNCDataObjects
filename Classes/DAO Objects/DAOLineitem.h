@@ -27,6 +27,7 @@
 @property (nonatomic, copy) NSNumber*       quantity;
 @property (nonatomic, copy) NSNumber*       price;
 @property (nonatomic, copy) NSNumber*       total;
+@property (nonatomic, copy) NSDictionary*   data;
 
 @property (nonatomic, copy) NSString*       categoryId;
 @property (nonatomic, copy) DAOCategory*    category;

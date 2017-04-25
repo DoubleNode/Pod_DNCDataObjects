@@ -58,6 +58,7 @@
     self.status     = object.status;
     self.state      = object.state;
     self.total      = object.total;
+    self.data       = object.data;
     
     if (object.category || (object.categoryId && ![self.categoryId isEqualToString:object.categoryId]))
     {

@@ -64,6 +64,7 @@
     self.quantity   = object.quantity;
     self.price      = object.price;
     self.total      = object.total;
+    self.data       = object.data;
     
     if (object.category || (object.categoryId && ![self.categoryId isEqualToString:object.categoryId]))
     {
