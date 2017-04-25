@@ -43,6 +43,9 @@
 - (NSMutableArray*)arrayFromJsonString:(NSString*)string;
 - (NSMutableDictionary*)dictionaryFromJsonString:(NSString*)string;
 
+- (NSString*)jsonStringFromArray:(NSArray*)array;
+- (NSString*)jsonStringFromDictionary:(NSDictionary*)dictionary;
+
 - (BOOL)isEqualToBase:(DAOBase*)object;
 
 - (id)updateWith:(DAOBase*)object;

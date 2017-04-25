@@ -247,6 +247,54 @@
     return retval;
 }
 
+- (NSString*)jsonStringFromArray:(NSArray*)array
+{
+    if ([array isKindOfClass:NSString.class])
+    {
+        return (NSString*)array;
+    }
+    if (![array isKindOfClass:NSArray.class])
+    {
+        return @"";
+    }
+    
+    NSError*    jsonError   = nil;
+    NSData*     jsonData    = [NSJSONSerialization dataWithJSONObject:array
+                                                              options:0
+                                                                error:&jsonError];
+    if (!jsonData || jsonError)
+    {
+        return @"";
+    }
+    
+    return [NSString.alloc initWithData:jsonData
+                               encoding:NSUTF8StringEncoding];
+}
+
+- (NSString*)jsonStringFromDictionary:(NSDictionary*)dictionary;
+{
+    if ([dictionary isKindOfClass:NSString.class])
+    {
+        return (NSString*)dictionary;
+    }
+    if (![dictionary isKindOfClass:NSDictionary.class])
+    {
+        return @"";
+    }
+    
+    NSError*    jsonError   = nil;
+    NSData*     jsonData    = [NSJSONSerialization dataWithJSONObject:dictionary
+                                                              options:0
+                                                                error:&jsonError];
+    if (!jsonData || jsonError)
+    {
+        return @"";
+    }
+    
+    return [NSString.alloc initWithData:jsonData
+                               encoding:NSUTF8StringEncoding];
+}
+
 - (BOOL)isEqual:(id)object
 {
     if (![object isKindOfClass:[self class]])
