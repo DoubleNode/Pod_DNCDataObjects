@@ -189,6 +189,64 @@
     return [NSString stringWithFormat:@"%@", string];
 }
 
+- (NSMutableArray*)arrayFromJsonString:(NSString*)string
+{
+    NSError*    jsonError   = nil;
+    NSData*     jsonData    = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSMutableArray*    retval  = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                 options:0
+                                                                   error:&jsonError];
+    if (!retval || jsonError)
+    {
+        return NSMutableArray.array;
+    }
+    if ([retval isKindOfClass:NSArray.class])
+    {
+        return @[ retval ].mutableCopy;
+    }
+    if (![retval isKindOfClass:NSArray.class])
+    {
+        return NSMutableArray.array;
+    }
+    
+    if (![retval isKindOfClass:NSMutableArray.class])
+    {
+        retval = retval.mutableCopy;
+    }
+    
+    return retval;
+}
+
+- (NSMutableDictionary*)dictionaryFromJsonString:(NSString*)string
+{
+    NSError*    jsonError   = nil;
+    NSData*     jsonData    = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSMutableDictionary*    retval  = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                      options:0
+                                                                        error:&jsonError];
+    if (!retval || jsonError)
+    {
+        return NSMutableDictionary.dictionary;
+    }
+    if ([retval isKindOfClass:NSArray.class])
+    {
+        return @{ @"array" : retval }.mutableCopy;
+    }
+    if (![retval isKindOfClass:NSDictionary.class])
+    {
+        return NSMutableDictionary.dictionary;
+    }
+    
+    if (![retval isKindOfClass:NSMutableDictionary.class])
+    {
+        retval = retval.mutableCopy;
+    }
+    
+    return retval;
+}
+
 - (BOOL)isEqual:(id)object
 {
     if (![object isKindOfClass:[self class]])

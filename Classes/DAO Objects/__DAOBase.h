@@ -40,6 +40,9 @@
 
 - (NSString*)urlFromString:(NSString*)string;
 
+- (NSMutableArray*)arrayFromJsonString:(NSString*)string;
+- (NSMutableDictionary*)dictionaryFromJsonString:(NSString*)string;
+
 - (BOOL)isEqualToBase:(DAOBase*)object;
 
 - (id)updateWith:(DAOBase*)object;
