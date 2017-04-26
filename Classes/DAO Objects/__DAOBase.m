@@ -191,6 +191,11 @@
 
 - (NSMutableArray*)arrayFromJsonString:(NSString*)string
 {
+    if (![string isKindOfClass:NSString.class])
+    {
+        return NSMutableArray.array;
+    }
+    
     NSError*    jsonError   = nil;
     NSData*     jsonData    = [string dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -220,6 +225,11 @@
 
 - (NSMutableDictionary*)dictionaryFromJsonString:(NSString*)string
 {
+    if (![string isKindOfClass:NSString.class])
+    {
+        return NSMutableDictionary.dictionary;
+    }
+    
     NSError*    jsonError   = nil;
     NSData*     jsonData    = [string dataUsingEncoding:NSUTF8StringEncoding];
     
