@@ -54,6 +54,7 @@
     
     self.deviceId       = object.deviceId;
     self.deviceType     = object.deviceType;
+    self.serviceId      = object.serviceId;
     
     if (object.user || (object.userId && ![self.userId isEqualToString:object.userId]))
     {

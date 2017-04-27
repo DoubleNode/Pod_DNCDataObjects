@@ -18,6 +18,7 @@
 
 @property (nonatomic, copy)     NSString*   deviceId;
 @property (nonatomic, copy)     NSString*   deviceType;
+@property (nonatomic, copy)     NSString*   serviceId;
 
 @property (nonatomic, copy)     NSString*   userId;
 @property (nonatomic, copy)     DAOUser*    user;
