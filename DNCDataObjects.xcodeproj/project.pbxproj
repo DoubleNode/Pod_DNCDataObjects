@@ -12,6 +12,7 @@
 		6A02DF201EA3E80A00705754 /* DAOOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02DF1F1EA3E80A00705754 /* DAOOrder.m */; };
 		6A02DF231EA3E81300705754 /* DAOTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02DF221EA3E81200705754 /* DAOTransaction.m */; };
 		6A02DF261EA3E81D00705754 /* DAOLineitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02DF251EA3E81D00705754 /* DAOLineitem.m */; };
+		6A6549401EB2E89F002EBBCC /* DAOUserNotificationSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A65493F1EB2E89F002EBBCC /* DAOUserNotificationSetting.m */; };
 		6A7E0DC01DCE354C0077EC6E /* __DAOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA31DCE354C0077EC6E /* __DAOBase.m */; };
 		6A7E0DC11DCE354C0077EC6E /* DAOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA51DCE354C0077EC6E /* DAOAuth.m */; };
 		6A7E0DC21DCE354C0077EC6E /* DAOCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E0DA71DCE354C0077EC6E /* DAOCheckin.m */; };
@@ -66,6 +67,8 @@
 		6A02DF221EA3E81200705754 /* DAOTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOTransaction.m; path = "Classes/DAO Objects/DAOTransaction.m"; sourceTree = "<group>"; };
 		6A02DF241EA3E81D00705754 /* DAOLineitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOLineitem.h; path = "Classes/DAO Objects/DAOLineitem.h"; sourceTree = "<group>"; };
 		6A02DF251EA3E81D00705754 /* DAOLineitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOLineitem.m; path = "Classes/DAO Objects/DAOLineitem.m"; sourceTree = "<group>"; };
+		6A65493E1EB2E89F002EBBCC /* DAOUserNotificationSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOUserNotificationSetting.h; path = "Classes/DAO Objects/DAOUserNotificationSetting.h"; sourceTree = "<group>"; };
+		6A65493F1EB2E89F002EBBCC /* DAOUserNotificationSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOUserNotificationSetting.m; path = "Classes/DAO Objects/DAOUserNotificationSetting.m"; sourceTree = "<group>"; };
 		6A7E0DA21DCE354C0077EC6E /* __DAOBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = __DAOBase.h; path = "Classes/DAO Objects/__DAOBase.h"; sourceTree = "<group>"; };
 		6A7E0DA31DCE354C0077EC6E /* __DAOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = __DAOBase.m; path = "Classes/DAO Objects/__DAOBase.m"; sourceTree = "<group>"; };
 		6A7E0DA41DCE354C0077EC6E /* DAOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOAuth.h; path = "Classes/DAO Objects/DAOAuth.h"; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				6A7E0DBB1DCE354C0077EC6E /* DAOUser.m */,
 				6A7E0DBC1DCE354C0077EC6E /* DAOUserDevice.h */,
 				6A7E0DBD1DCE354C0077EC6E /* DAOUserDevice.m */,
+				6A65493E1EB2E89F002EBBCC /* DAOUserNotificationSetting.h */,
+				6A65493F1EB2E89F002EBBCC /* DAOUserNotificationSetting.m */,
 				6A7E0DBE1DCE354C0077EC6E /* DAOWishlist.h */,
 				6A7E0DBF1DCE354C0077EC6E /* DAOWishlist.m */,
 			);
@@ -520,6 +525,7 @@
 				6ACFB5F21DC9940D00CC388F /* main.m in Sources */,
 				6A7E0DC61DCE354C0077EC6E /* DAOLocation.m in Sources */,
 				6A81CCAC1E2B336000C4613A /* DAOCategory.m in Sources */,
+				6A6549401EB2E89F002EBBCC /* DAOUserNotificationSetting.m in Sources */,
 				6A7E0DC31DCE354C0077EC6E /* DAOFavorite.m in Sources */,
 				6AE4B05E1E860A320051EF08 /* DAOTransmission.m in Sources */,
 				6A02DF201EA3E80A00705754 /* DAOOrder.m in Sources */,
