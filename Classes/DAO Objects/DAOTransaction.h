@@ -43,6 +43,7 @@
 @property (nonatomic, copy) NSString*       paymentType;
 @property (nonatomic, copy) NSDictionary*   paymentData;
 
+@property (nonatomic, copy) NSDate*         chargeAfter;
 @property (nonatomic, copy) NSDate*         holdUntil;
 @property (nonatomic, copy) NSDate*         cancelAfter;
 @property (nonatomic, copy) NSDate*         charged;

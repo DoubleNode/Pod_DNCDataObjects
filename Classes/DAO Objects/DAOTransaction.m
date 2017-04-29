@@ -88,6 +88,7 @@
     self.paymentType    = object.paymentType;
     self.paymentData    = object.paymentData;
     
+    self.chargeAfter    = object.chargeAfter;
     self.holdUntil      = object.holdUntil;
     self.cancelAfter    = object.cancelAfter;
     self.charged        = object.charged;
