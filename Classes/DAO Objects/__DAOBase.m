@@ -42,7 +42,7 @@
 
 - (BOOL)boolFromString:(NSString*)string
 {
-    if (![string isKindOfClass:[NSString class]])
+    if (![string isKindOfClass:NSString.class])
     {
         return NO;
     }
@@ -67,17 +67,27 @@
 
 - (NSDate*)dateFromNumber:(NSNumber*)number
 {
-    if ([number isKindOfClass:[NSDate class]])
+    if ([number isKindOfClass:NSNull.class])
+    {
+        return nil;
+    }
+    
+    if ([number isKindOfClass:NSDate.class])
     {
         return (NSDate*)number;
     }
-
+    
     return [NSDate dateWithTimeIntervalSinceReferenceDate:number.doubleValue];
 }
 
 - (NSDate*)dateFromString:(NSString*)string
 {
-    if ([string isKindOfClass:[NSDate class]])
+    if ([string isKindOfClass:NSNull.class])
+    {
+        return nil;
+    }
+    
+    if ([string isKindOfClass:NSDate.class])
     {
         return (NSDate*)string;
     }
@@ -92,7 +102,7 @@
 
 - (NSString*)idFromString:(NSString*)string
 {
-    if ([string isKindOfClass:[NSString class]])
+    if ([string isKindOfClass:NSString.class])
     {
         return string;
     }
@@ -116,7 +126,7 @@
     {
         return @0;
     }
-
+    
     return @0;
 }
 
@@ -134,7 +144,7 @@
         theNumberFormatter = self.class.defaultNumberFormatter;
     }
     
-    if ([string isKindOfClass:[NSNumber class]])
+    if ([string isKindOfClass:NSNumber.class])
     {
         return (NSNumber*)string;
     }
@@ -149,7 +159,7 @@
 
 - (NSString*)stringFromString:(NSString*)string
 {
-    if ([string isKindOfClass:[NSString class]])
+    if ([string isKindOfClass:NSString.class])
     {
         return string;
     }
@@ -164,7 +174,12 @@
 
 - (NSDate*)timeFromString:(NSString*)string
 {
-    if ([string isKindOfClass:[NSDate class]])
+    if ([string isKindOfClass:NSNull.class])
+    {
+        return nil;
+    }
+    
+    if ([string isKindOfClass:NSDate.class])
     {
         return (NSDate*)string;
     }
@@ -176,7 +191,7 @@
 
 - (NSString*)urlFromString:(NSString*)string
 {
-    if ([string isKindOfClass:[NSString class]])
+    if ([string isKindOfClass:NSString.class])
     {
         return string;
     }
@@ -307,7 +322,7 @@
 
 - (BOOL)isEqual:(id)object
 {
-    if (![object isKindOfClass:[self class]])
+    if (![object isKindOfClass:self.class])
     {
         return NO;
     }
@@ -339,7 +354,7 @@
 
 - (id)copyWithZone:(NSZone*)zone
 {
-    typeof(self)    copy = [[[self class] allocWithZone:zone] init];
+    typeof(self)    copy = [[self.class allocWithZone:zone] init];
     
     [copy updateWith:self];
     
