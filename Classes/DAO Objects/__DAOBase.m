@@ -159,6 +159,16 @@
 
 - (NSString*)stringFromString:(NSString*)string
 {
+    if ([string isKindOfClass:NSDictionary.class])
+    {
+        NSData* jsonData    = [NSJSONSerialization dataWithJSONObject:string
+                                                              options:0
+                                                                error:nil];
+        
+        string = [NSString.alloc initWithData:jsonData
+                                     encoding:NSUTF8StringEncoding];
+    }
+    
     if ([string isKindOfClass:NSString.class])
     {
         return string;
