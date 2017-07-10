@@ -12,6 +12,7 @@
 @class DAOConversation;
 @class DAOItem;
 @class DAOLocation;
+@class DAOPhoto;
 @class DAOUser;
 
 @interface DAOMessage : DAOBase
@@ -25,6 +26,8 @@
 @property (nonatomic, copy) NSString*   subject;
 @property (nonatomic, copy) NSString*   message;
 @property (nonatomic, copy) NSString*   type;
+
+@property (nonatomic, copy) NSArray<DAOPhoto*>*     photos;
 
 @property (nonatomic, copy) DAOCategory*    fromCategory;
 @property (nonatomic, copy) DAOItem*        fromItem;

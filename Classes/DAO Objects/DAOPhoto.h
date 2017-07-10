@@ -12,6 +12,7 @@
 @class DAOFavorite;
 @class DAOItem;
 @class DAOLocation;
+@class DAOMessage;
 @class DAOReview;
 @class DAOUser;
 
@@ -38,6 +39,9 @@
 
 @property (nonatomic, copy) NSString*       locationId;
 @property (nonatomic, copy) DAOLocation*    location;
+
+@property (nonatomic, copy) NSString*       messageId;
+@property (nonatomic, copy) DAOMessage*     message;
 
 @property (nonatomic, copy) NSString*       reviewId;
 @property (nonatomic, copy) DAOReview*      review;

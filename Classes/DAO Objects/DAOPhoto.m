@@ -10,6 +10,7 @@
 
 #import "DAOItem.h"
 #import "DAOLocation.h"
+#import "DAOMessage.h"
 #import "DAOReview.h"
 #import "DAOUser.h"
 
@@ -49,6 +50,7 @@
     if (![object.categoryId isEqualToString:self.categoryId])   {   return NO;  }
     if (![object.itemId isEqualToString:self.itemId])           {   return NO;  }
     if (![object.locationId isEqualToString:self.locationId])   {   return NO;  }
+    if (![object.messageId isEqualToString:self.messageId])     {   return NO;  }
     if (![object.reviewId isEqualToString:self.reviewId])       {   return NO;  }
     if (![object.userId isEqualToString:self.userId])           {   return NO;  }
     
@@ -80,6 +82,12 @@
         self.location   = object.location;
     }
     self.locationId = object.locationId;
+    
+    if (object.message || (object.messageId && ![self.messageId isEqualToString:object.messageId]))
+    {
+        self.message   = object.message;
+    }
+    self.messageId = object.messageId;
     
     if (object.review || (object.reviewId && ![self.reviewId isEqualToString:object.reviewId]))
     {

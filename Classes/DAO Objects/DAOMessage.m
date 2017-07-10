@@ -12,6 +12,7 @@
 #import "DAOConversation.h"
 #import "DAOItem.h"
 #import "DAOLocation.h"
+#import "DAOPhoto.h"
 #import "DAOUser.h"
 
 @implementation DAOMessage
@@ -61,6 +62,11 @@
     if (![object.conversation isEqualToConversation:self.conversation])
     {
         self.conversation   = object.conversation;
+    }
+    
+    if (object.photos || ![self.id isEqualToString:object.id])
+    {
+        self.photos  = object.photos;
     }
     
     if (![object.fromCategory isEqualToCategory:self.fromCategory])
