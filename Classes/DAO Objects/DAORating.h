@@ -20,6 +20,7 @@
 - (BOOL)isEqualToRating:(DAORating*)object;
 
 @property (nonatomic, copy) NSNumber*       value;
+@property (nonatomic, copy) NSString*       ratingType;
 
 @property (nonatomic, copy) NSString*       itemId;
 @property (nonatomic, copy) DAOItem*        item;
