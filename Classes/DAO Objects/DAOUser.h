@@ -46,12 +46,13 @@
 @property (nonatomic, copy)     NSString*       contactId;
 @property (nonatomic, copy)     DAOContact*     contact;
 
-@property (nonatomic, copy)     NSString*   phoneNumber;
-@property (nonatomic, copy)     NSString*   name;
-@property (nonatomic, copy)     NSString*   handle;
-@property (nonatomic, copy)     NSDate*     birthday;
-@property (nonatomic, copy)     NSString*   location;
-@property (nonatomic, copy)     NSNumber*   rating;
+@property (nonatomic, copy)     NSString*       phoneNumber;
+@property (nonatomic, copy)     NSString*       name;
+@property (nonatomic, copy)     NSString*       handle;
+@property (nonatomic, copy)     NSDate*         birthday;
+@property (nonatomic, copy)     NSString*       location;
+@property (nonatomic)           NSNumber*       rating;
+@property (nonatomic, copy)     NSDictionary*   ratingTypes;
 
 @property (nonatomic, assign, getter = isThisMe)    BOOL    me;
 
