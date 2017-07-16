@@ -29,8 +29,9 @@
     self = [super init];
     if (self)
     {
-        self.optionIds  = [@{ } mutableCopy];
-        self.options    = [@{ } mutableCopy];
+        self.ratingTypes    = [@{ } mutableCopy];
+        self.optionIds      = [@{ } mutableCopy];
+        self.options        = [@{ } mutableCopy];
     }
     
     return self;
@@ -63,6 +64,7 @@
     self.name               = object.name;
     self.descriptionString  = object.descriptionString;
     self.rating             = object.rating;
+    self.ratingTypes        = object.ratingTypes;
     self.defaultPhoto       = object.defaultPhoto;
     
     self.numCheckins        = object.numCheckins;

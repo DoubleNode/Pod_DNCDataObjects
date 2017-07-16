@@ -60,6 +60,7 @@
     [super updateWith:object];
     
     self.value      = object.value;
+    self.ratingType = object.ratingType;
     
     if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {

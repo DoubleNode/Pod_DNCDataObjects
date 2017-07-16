@@ -24,8 +24,9 @@
     self = [super init];
     if (self)
     {
-        self.optionIds  = [@{ } mutableCopy];
-        self.options    = [@{ } mutableCopy];
+        self.ratingTypes    = [@{ } mutableCopy];
+        self.optionIds      = [@{ } mutableCopy];
+        self.options        = [@{ } mutableCopy];
     }
     
     return self;
@@ -83,6 +84,7 @@
     self.birthday       = object.birthday;
     self.location       = object.location;
     self.rating         = object.rating;
+    self.ratingTypes    = object.ratingTypes;
     
     self.me             = object.me;
     

@@ -25,8 +25,9 @@
     self = [super init];
     if (self)
     {
-        self.optionIds  = [@{ } mutableCopy];
-        self.options    = [@{ } mutableCopy];
+        self.ratingTypes    = [@{ } mutableCopy];
+        self.optionIds      = [@{ } mutableCopy];
+        self.options        = [@{ } mutableCopy];
     }
     
     return self;
@@ -61,6 +62,7 @@
     self.established        = object.established;
     self.mailingListURL     = object.mailingListURL;
     self.rating             = object.rating;
+    self.ratingTypes        = object.ratingTypes;
     self.defaultPhoto       = object.defaultPhoto;
 
     self.phone              = object.phone;
