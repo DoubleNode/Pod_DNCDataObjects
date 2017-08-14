@@ -10,8 +10,8 @@
 
 @class DAOItem;
 @class DAOLocation;
-@class DAORating;
 @class DAOPhoto;
+@class DAORating;
 @class DAOUser;
 
 @interface DAOReview : DAOBase
@@ -39,6 +39,9 @@
 @property (nonatomic, copy) NSString*       photoId;
 @property (nonatomic, copy) DAOPhoto*       photo;
 
+@property (nonatomic, copy) NSDictionary<NSString*, DAORating*>*    keyedRatings;
+
 @property (nonatomic, copy) NSArray<DAOPhoto*>*     photos;
+@property (nonatomic, copy) NSArray<DAORating*>*    ratings;
 
 @end

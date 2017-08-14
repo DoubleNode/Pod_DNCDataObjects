@@ -65,6 +65,16 @@
     self.text           = object.text;
     self.ratingValue    = object.ratingValue;
     
+    if (object.keyedRatings || ![self.id isEqualToString:object.id])
+    {
+        self.keyedRatings = object.keyedRatings;
+    }
+    
+    if (object.ratings || ![self.id isEqualToString:object.id])
+    {
+        self.ratings = object.ratings;
+    }
+    
     if (object.photos || ![self.id isEqualToString:object.id])
     {
         self.photos  = object.photos;
