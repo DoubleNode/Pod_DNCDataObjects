@@ -39,4 +39,6 @@
 @property (nonatomic, copy) NSString*       photoId;
 @property (nonatomic, copy) DAOPhoto*       photo;
 
+@property (nonatomic, copy) NSArray<DAOPhoto*>*     photos;
+
 @end

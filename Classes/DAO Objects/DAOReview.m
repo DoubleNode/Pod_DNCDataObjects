@@ -65,6 +65,11 @@
     self.text           = object.text;
     self.ratingValue    = object.ratingValue;
     
+    if (object.photos || ![self.id isEqualToString:object.id])
+    {
+        self.photos  = object.photos;
+    }
+
     if (object.item || (object.itemId && ![self.itemId isEqualToString:object.itemId]))
     {
         self.item   = object.item;
