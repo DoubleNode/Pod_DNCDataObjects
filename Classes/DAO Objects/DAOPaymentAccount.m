@@ -53,6 +53,7 @@
     
     self.type           = object.type;
     self.name           = object.name;
+    self.cardType       = object.cardType;
     self.accountToken   = object.accountToken;
     self.accountNumber  = object.accountNumber;
     self.expirationDate = object.expirationDate;
