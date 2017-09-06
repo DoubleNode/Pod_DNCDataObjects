@@ -97,7 +97,15 @@
     NSDateFormatter*   dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
-    return [dateFormatter dateFromString:dateString];
+    NSDate* retval = [dateFormatter dateFromString:dateString];
+    if (!retval)
+    {
+        [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+
+        retval = [dateFormatter dateFromString:dateString];
+    }
+    
+    return retval;
 }
 
 - (NSString*)idFromString:(NSString*)string
