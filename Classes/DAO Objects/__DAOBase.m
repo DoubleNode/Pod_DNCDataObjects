@@ -62,7 +62,7 @@
         return NO;
     }
     
-    return [[string substringToIndex:1] isEqualToString:@"Y"];
+    return ([[string substringToIndex:1] isEqualToString:@"Y"] || [[string substringToIndex:1] isEqualToString:@"1"]);
 }
 
 - (NSDate*)dateFromNumber:(NSNumber*)number
