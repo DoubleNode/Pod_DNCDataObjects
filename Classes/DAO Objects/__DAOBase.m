@@ -165,6 +165,29 @@
     return [theNumberFormatter numberFromString:string];
 }
 
+- (int)intFromNumber:(NSNumber*)number
+{
+    NSNumber*   retval = [self numberFromNumber:number];
+    
+    return retval.intValue;
+}
+
+- (int)intFromString:(NSString*)string
+{
+    NSNumber*   retval = [self numberFromString:string];
+    
+    return retval.intValue;
+}
+
+- (int)intFromString:(NSString*)string
+      usingFormatter:(NSNumberFormatter*)numberFormatter
+{
+    NSNumber*   retval = [self numberFromString:string
+                                 usingFormatter:numberFormatter];
+    
+    return retval.intValue;
+}
+
 - (NSString*)stringFromString:(NSString*)string
 {
     if ([string isKindOfClass:NSDictionary.class])

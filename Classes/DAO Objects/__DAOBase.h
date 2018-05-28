@@ -34,6 +34,11 @@
 - (NSNumber*)numberFromString:(NSString*)string
                usingFormatter:(NSNumberFormatter*)numberFormatter;
 
+- (int)intFromNumber:(NSNumber*)number;
+- (int)intFromString:(NSString*)string;
+- (int)intFromString:(NSString*)string
+      usingFormatter:(NSNumberFormatter*)numberFormatter;
+
 - (NSString*)stringFromString:(NSString*)string;
 
 - (NSDate*)timeFromString:(NSString*)string;
