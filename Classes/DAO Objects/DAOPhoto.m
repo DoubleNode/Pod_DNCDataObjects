@@ -65,6 +65,8 @@
     self.url_preload    = object.url_preload;
     self.comment        = object.comment;
     
+    self.file           = object.file;
+    
     if (object.category || (object.categoryId && ![self.categoryId isEqualToString:object.categoryId]))
     {
         self.category   = object.category;
