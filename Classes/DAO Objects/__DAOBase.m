@@ -165,6 +165,10 @@
         {
             return nil;
         }
+        if (!dateString.length)
+        {
+            return nil;
+        }
         
         return [self.class.firebaseDateFormatter dateFromString:dateString];
     }
@@ -306,7 +310,11 @@
         {
             return nil;
         }
-        
+        if (!dateString.length)
+        {
+            return nil;
+        }
+
         return [self.class.firebaseTimeFormatter dateFromString:dateString];
     }
 
