@@ -43,6 +43,8 @@
 - (NSString*)stringFromFirebaseTime:(NSDate*)time;
 - (NSString*)stringFromString:(NSString*)string;
 
+- (NSString*)santizeKeyForFirebase:(NSString*)keyString;
+
 - (NSDate*)timeFromString:(NSString*)string;
 
 - (NSString*)urlFromString:(NSString*)string;

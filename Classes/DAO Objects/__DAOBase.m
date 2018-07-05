@@ -319,6 +319,15 @@
     return [NSString stringWithFormat:@"%@", string];
 }
 
+- (NSString*)santizeKeyForFirebase:(NSString*)keyString
+{
+    NSString*   kInvalidKeyCharacters = @"[].#$/";
+    
+    NSCharacterSet* invalidCharSet = [NSCharacterSet characterSetWithCharactersInString:kInvalidKeyCharacters];
+    
+    return [[keyString componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+}
+
 - (NSDate*)timeFromString:(NSString*)string
 {
     if ([string isKindOfClass:NSNull.class])
