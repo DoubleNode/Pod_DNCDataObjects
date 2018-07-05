@@ -325,7 +325,7 @@
     
     NSCharacterSet* invalidCharSet = [NSCharacterSet characterSetWithCharactersInString:kInvalidKeyCharacters];
     
-    return [[keyString componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@""];
+    return [[keyString componentsSeparatedByCharactersInSet:invalidCharSet] componentsJoinedByString:@"_"];
 }
 
 - (NSDate*)timeFromString:(NSString*)string
