@@ -353,13 +353,19 @@
         {
             return nil;
         }
-
+        
         return [self.class.firebaseTimeFormatter dateFromString:dateString];
     }
-
-    double  unixDate    = [[self numberFromString:string] doubleValue];
     
-    return [NSDate dateWithTimeIntervalSince1970:unixDate];
+    id  numberValue = [self numberFromString:string];
+    if (numberValue)
+    {
+        double  unixDate    = [numberValue doubleValue];
+        
+        return [NSDate dateWithTimeIntervalSince1970:unixDate];
+    }
+    
+    return [self.class.firebaseTimeFormatter dateFromString:string];
 }
 
 - (NSString*)urlFromString:(NSString*)string
