@@ -25,6 +25,70 @@
     return defaultNumberFormatter;
 }
 
++ (NSDateFormatter*)defaultDateFormatter1
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+                      [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)defaultDateFormatter2
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+                      [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)firebaseDateFormatter
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+                      [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'"];
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)firebaseTimeFormatter
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+                      [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"];
+                  });
+    
+    return dateFormatter;
+}
+
 - (id)init
 {
     self = [super init];
@@ -92,17 +156,25 @@
         return (NSDate*)string;
     }
     
+    if ([string isKindOfClass:NSDictionary.class])
+    {
+        // Support for Firebase Date format
+        NSDictionary*   dictionary  = (NSDictionary*)string;
+        NSString*       dateString  = dictionary[@"iso"];
+        if (![dateString isKindOfClass:NSString.class])
+        {
+            return nil;
+        }
+        
+        return [self.class.firebaseDateFormatter dateFromString:dateString];
+    }
+    
     NSString*   dateString  = [self stringFromString:string];
     
-    NSDateFormatter*   dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    
-    NSDate* retval = [dateFormatter dateFromString:dateString];
+    NSDate* retval = [self.class.defaultDateFormatter1 dateFromString:dateString];
     if (!retval)
     {
-        [dateFormatter setDateFormat:@"MM/dd/yyyy"];
-
-        retval = [dateFormatter dateFromString:dateString];
+        retval = [self.class.defaultDateFormatter2 dateFromString:dateString];
     }
     
     return retval;
@@ -225,6 +297,19 @@
         return (NSDate*)string;
     }
     
+    if ([string isKindOfClass:NSDictionary.class])
+    {
+        // Support for Firebase Date format
+        NSDictionary*   dictionary  = (NSDictionary*)string;
+        NSString*       dateString  = dictionary[@"iso"];
+        if (![dateString isKindOfClass:NSString.class])
+        {
+            return nil;
+        }
+        
+        return [self.class.firebaseTimeFormatter dateFromString:dateString];
+    }
+
     double  unixDate    = [[self numberFromString:string] doubleValue];
     
     return [NSDate dateWithTimeIntervalSince1970:unixDate];
