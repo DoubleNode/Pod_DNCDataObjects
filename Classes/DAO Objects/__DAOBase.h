@@ -39,6 +39,8 @@
 - (int)intFromString:(NSString*)string
       usingFormatter:(NSNumberFormatter*)numberFormatter;
 
+- (NSString*)stringFromFirebaseDate:(NSDate*)date;
+- (NSString*)stringFromFirebaseTime:(NSDate*)time;
 - (NSString*)stringFromString:(NSString*)string;
 
 - (NSDate*)timeFromString:(NSString*)string;

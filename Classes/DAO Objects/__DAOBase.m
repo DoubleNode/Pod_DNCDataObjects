@@ -264,6 +264,36 @@
     return retval.intValue;
 }
 
+- (NSString*)stringFromFirebaseDate:(NSDate*)date
+{
+    if ([date isKindOfClass:NSString.class])
+    {
+        return (NSString*)date;
+    }
+    
+    if (!date || ![date isKindOfClass:NSDate.class])
+    {
+        return @"";
+    }
+    
+    return [self.class.firebaseDateFormatter stringFromDate:date];
+}
+
+- (NSString*)stringFromFirebaseTime:(NSDate*)time
+{
+    if ([time isKindOfClass:NSString.class])
+    {
+        return (NSString*)time;
+    }
+    
+    if (!time || ![time isKindOfClass:NSDate.class])
+    {
+        return @"";
+    }
+    
+    return [self.class.firebaseTimeFormatter stringFromDate:time];
+}
+
 - (NSString*)stringFromString:(NSString*)string
 {
     if ([string isKindOfClass:NSDictionary.class])
