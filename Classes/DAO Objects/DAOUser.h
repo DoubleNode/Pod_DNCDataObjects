@@ -86,6 +86,7 @@
 @property (nonatomic, copy)     DAOFollow*  myFollow;
 
 @property (nonatomic, copy) NSArray<DAOCategory*>*      categories;
+@property (nonatomic, copy) NSArray<DAOContact*>*       contacts;
 @property (nonatomic, copy) NSArray<DAOFavorite*>*      favorites;
 @property (nonatomic, copy) NSArray<DAOItem*>*          items;
 @property (nonatomic, copy) NSArray<DAOLocation*>*      locations;

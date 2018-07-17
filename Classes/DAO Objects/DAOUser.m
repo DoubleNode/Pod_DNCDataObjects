@@ -114,6 +114,10 @@
     {
         self.categories  = object.categories;
     }
+    if (object.contacts || ![self.id isEqualToString:object.id])
+    {
+        self.contacts   = object.contacts;
+    }
     if (object.favorites || ![self.id isEqualToString:object.id])
     {
         self.favorites  = object.favorites;
