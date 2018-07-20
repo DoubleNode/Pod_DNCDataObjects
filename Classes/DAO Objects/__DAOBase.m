@@ -106,17 +106,12 @@
 
 - (BOOL)boolFromString:(NSString*)string
 {
-    if (![string isKindOfClass:NSString.class])
+    if ([string isKindOfClass:NSNumber.class])
     {
-        return NO;
+        string = [NSString stringWithFormat:@"%@", string];
     }
     
     if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
-    {
-        return NO;
-    }
-    
-    if (!string)
     {
         return NO;
     }
