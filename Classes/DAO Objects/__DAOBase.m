@@ -34,8 +34,8 @@
                   ^()
                   {
                       dateFormatter = [NSDateFormatter.alloc init];
-                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-                      [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy-MM-dd";
                   });
     
     return dateFormatter;
@@ -50,8 +50,8 @@
                   ^()
                   {
                       dateFormatter = [NSDateFormatter.alloc init];
-                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-                      [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"MM/dd/yyyy";
                   });
     
     return dateFormatter;
@@ -66,8 +66,8 @@
                   ^()
                   {
                       dateFormatter = [NSDateFormatter.alloc init];
-                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-                      [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'"];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'";
                   });
     
     return dateFormatter;
@@ -82,8 +82,8 @@
                   ^()
                   {
                       dateFormatter = [NSDateFormatter.alloc init];
-                      [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-                      [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'"];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'";
                   });
     
     return dateFormatter;
@@ -94,10 +94,10 @@
     self = [super init];
     if (self)
     {
-        self.id         = [[NSUUID UUID] UUIDString];
-        self._created   = [NSDate date];
+        self.id         = NSUUID.UUID.UUIDString;
+        self._created   = NSDate.date;
         self._createdBy = nil;
-        self._updated   = [NSDate date];
+        self._updated   = NSDate.date;
         self._updatedBy = nil;
     }
     
@@ -111,7 +111,9 @@
         string = [NSString stringWithFormat:@"%@", string];
     }
     
-    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
+    if (!string ||
+        ![string isKindOfClass:NSString.class] ||
+        [string isEqualToString:@"<null>"])
     {
         return NO;
     }
@@ -121,7 +123,8 @@
         return NO;
     }
     
-    return ([[string substringToIndex:1] isEqualToString:@"Y"] || [[string substringToIndex:1] isEqualToString:@"1"]);
+    return ([[string substringToIndex:1] isEqualToString:@"Y"] ||
+            [[string substringToIndex:1] isEqualToString:@"1"]);
 }
 
 - (NSDate*)dateFromNumber:(NSNumber*)number
@@ -186,7 +189,9 @@
         return string;
     }
     
-    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
+    if (!string ||
+        ![string isKindOfClass:NSString.class] ||
+        [string isEqualToString:@"<null>"])
     {
         return nil;
     }
@@ -201,7 +206,8 @@
         return (NSNumber*)number;
     }
     
-    if (!number || ![number isKindOfClass:NSNumber.class])
+    if (!number ||
+        ![number isKindOfClass:NSNumber.class])
     {
         return @0;
     }
@@ -228,7 +234,9 @@
         return (NSNumber*)string;
     }
     
-    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
+    if (!string ||
+        ![string isKindOfClass:NSString.class] ||
+        [string isEqualToString:@"<null>"])
     {
         return @0;
     }
@@ -266,7 +274,8 @@
         return (NSString*)date;
     }
     
-    if (!date || ![date isKindOfClass:NSDate.class])
+    if (!date ||
+        ![date isKindOfClass:NSDate.class])
     {
         return @"";
     }
@@ -281,7 +290,8 @@
         return (NSString*)time;
     }
     
-    if (!time || ![time isKindOfClass:NSDate.class])
+    if (!time ||
+        ![time isKindOfClass:NSDate.class])
     {
         return @"";
     }
@@ -306,7 +316,9 @@
         return string;
     }
     
-    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
+    if (!string ||
+        ![string isKindOfClass:NSString.class] ||
+        [string isEqualToString:@"<null>"])
     {
         return @"";
     }
@@ -370,7 +382,9 @@
         return string;
     }
     
-    if (!string || ![string isKindOfClass:NSString.class] || [string isEqualToString:@"<null>"])
+    if (!string ||
+        ![string isKindOfClass:NSString.class] ||
+        [string isEqualToString:@"<null>"])
     {
         return @"";
     }
@@ -506,7 +520,7 @@
 
 - (BOOL)isEqualToBase:(DAOBase*)object
 {
-    if (![object.id isEqualToString:self.id])               {   return NO;  }
+    if (![object.id isEqualToString:self.id])   {   return NO;  }
     
     return YES;
 }
@@ -540,7 +554,11 @@
     __status        = status;
     __statusError   = nil;
     
-    if (!status || !status.length || [status isEqualToString:@"success"] || [status isEqualToString:@"published"] || [status isEqualToString:@"pending"])
+    if (!status ||
+        !status.length ||
+        [status isEqualToString:@"success"] ||
+        [status isEqualToString:@"published"] ||
+        [status isEqualToString:@"pending"])
     {
         return;
     }
