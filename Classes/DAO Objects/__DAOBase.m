@@ -25,6 +25,18 @@
     return defaultNumberFormatter;
 }
 
++ (NSNumberFormatter* _Nonnull)defaultCurrencyFormatter
+{
+    static dispatch_once_t predicate;
+    static NSNumberFormatter* defaultCurrencyFormatter = nil;
+    dispatch_once(&predicate, ^
+                  {
+                      defaultCurrencyFormatter              = [[NSNumberFormatter alloc] init];
+                      defaultCurrencyFormatter.numberStyle  = NSNumberFormatterCurrencyStyle;
+                  });
+    return defaultCurrencyFormatter;
+}
+
 + (NSDateFormatter*)defaultDateFormatter1
 {
     static dispatch_once_t  onceToken;
@@ -206,8 +218,7 @@
         return (NSNumber*)number;
     }
     
-    if (!number ||
-        ![number isKindOfClass:NSNumber.class])
+    if (!number)
     {
         return @0;
     }
@@ -223,15 +234,15 @@
 - (NSNumber*)numberFromString:(NSString*)string
                usingFormatter:(NSNumberFormatter*)numberFormatter
 {
+    if ([string isKindOfClass:NSNumber.class])
+    {
+        return (NSNumber*)string;
+    }
+    
     NSNumberFormatter* theNumberFormatter = numberFormatter;
     if (!theNumberFormatter)
     {
         theNumberFormatter = self.class.defaultNumberFormatter;
-    }
-    
-    if ([string isKindOfClass:NSNumber.class])
-    {
-        return (NSNumber*)string;
     }
     
     if (!string ||
@@ -242,6 +253,50 @@
     }
     
     return [theNumberFormatter numberFromString:string];
+}
+
+- (NSDecimalNumber*)decimalNumberFromNumber:(NSNumber*)number
+{
+    if ([number isKindOfClass:NSDecimalNumber.class])
+    {
+        return (NSDecimalNumber*)number;
+    }
+    
+    if (!number)
+    {
+        return [NSDecimalNumber decimalNumberWithString:@"0"];
+    }
+    
+    return [NSDecimalNumber decimalNumberWithString:@"0"];
+}
+
+- (NSDecimalNumber*)decimalNumberFromString:(NSString*)string
+{
+    return [self decimalNumberFromString:string];
+}
+
+- (NSDecimalNumber*)decimalNumberFromString:(NSString*)string
+                             usingFormatter:(NSNumberFormatter*)numberFormatter
+{
+    if ([string isKindOfClass:NSDecimalNumber.class])
+    {
+        return (NSDecimalNumber*)string;
+    }
+    
+    NSNumberFormatter* theNumberFormatter = numberFormatter;
+    if (!theNumberFormatter)
+    {
+        theNumberFormatter = self.class.defaultNumberFormatter;
+    }
+    
+    if (!string ||
+        ![string isKindOfClass:NSString.class] ||
+        [string isEqualToString:@"<null>"])
+    {
+        return [self decimalNumberFromString:string];
+    }
+    
+    return (NSDecimalNumber*)[theNumberFormatter numberFromString:string];
 }
 
 - (int)intFromNumber:(NSNumber*)number
@@ -372,7 +427,19 @@
         return [NSDate dateWithTimeIntervalSince1970:unixDate];
     }
     
-    return [self.class.firebaseTimeFormatter dateFromString:string];
+    NSString*   timeString  = [self stringFromString:string];
+    
+    NSDate* retval = [self.class.firebaseTimeFormatter dateFromString:timeString];
+    if (!retval)
+    {
+        retval = [self.class.defaultDateFormatter1 dateFromString:timeString];
+    }
+    if (!retval)
+    {
+        retval = [self.class.defaultDateFormatter2 dateFromString:timeString];
+    }
+    
+    return retval;
 }
 
 - (NSString*)urlFromString:(NSString*)string

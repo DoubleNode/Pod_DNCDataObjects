@@ -34,6 +34,11 @@
 - (NSNumber*)numberFromString:(NSString*)string
                usingFormatter:(NSNumberFormatter*)numberFormatter;
 
+- (NSDecimalNumber*)decimalNumberFromNumber:(NSNumber*)number;
+- (NSDecimalNumber*)decimalNumberFromString:(NSString*)string;
+- (NSDecimalNumber*)decimalNumberFromString:(NSString*)string
+                             usingFormatter:(NSNumberFormatter*)numberFormatter;
+
 - (int)intFromNumber:(NSNumber*)number;
 - (int)intFromString:(NSString*)string;
 - (int)intFromString:(NSString*)string
