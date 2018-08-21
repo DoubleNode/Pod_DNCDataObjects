@@ -1,25 +1,25 @@
 //
-//  DAOOrder.m
+//  DAOOrderSection.m
 //  DoubleNode Core
 //
 //  Created by Darren Ehlers on 2016/10/16.
 //  Copyright © 2016 Darren Ehlers and DoubleNode, LLC. All rights reserved.
 //
 
-#import "DAOOrder.h"
+#import "DAOOrderSection.h"
 
 #import "DAOCategory.h"
 #import "DAOItem.h"
 #import "DAOLineitem.h"
 #import "DAOLocation.h"
-#import "DAOTransaction.h"
+#import "DAOOrder.h"
 #import "DAOUser.h"
 
-@implementation DAOOrder
+@implementation DAOOrderSection
 
-+ (instancetype)order   {   return [self.class.alloc init]; }
++ (instancetype)orderSection    {   return [self.class.alloc init]; }
 
-+ (instancetype)copyFrom:(DAOOrder*)object
++ (instancetype)copyFrom:(DAOOrderSection*)object
 {
     return [[self.class.alloc init] updateWith:object];
 }
@@ -41,22 +41,27 @@
         return NO;
     }
     
-    return [self isEqualToOrder:object];
+    return [self isEqualToOrderSection:object];
 }
 
-- (BOOL)isEqualToOrder:(DAOOrder*)object
+- (BOOL)isEqualToOrderSection:(DAOOrderSection*)object
 {
     if (![super isEqualToBase:object])  {   return NO;  }
     
     return YES;
 }
 
-- (id)updateWith:(DAOOrder*)object
+- (id)updateWith:(DAOOrderSection*)object
 {
     [super updateWith:object];
     
-    self.status     = object.status;
-    self.state      = object.state;
+    if (object.order || (object.orderId && ![self.orderId isEqualToString:object.orderId]))
+    {
+        self.order   = object.order;
+    }
+    self.orderId = object.orderId;
+    
+    self.name       = object.name;
     self.total      = object.total;
     self.data       = object.data;
     
@@ -85,8 +90,6 @@
     self.userId = object.userId;
     
     self.lineitems      = object.lineitems;
-    self.orderSections  = object.orderSections;
-    self.transactions   = object.transactions;
 
     return object;
 }

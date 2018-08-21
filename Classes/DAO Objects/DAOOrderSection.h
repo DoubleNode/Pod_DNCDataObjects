@@ -1,5 +1,5 @@
 //
-//  DAOOrder.h
+//  DAOOrderSection.h
 //  DoubleNode Core
 //
 //  Created by Darren Ehlers on 2016/10/16.
@@ -12,17 +12,18 @@
 @class DAOItem;
 @class DAOLineitem;
 @class DAOLocation;
-@class DAOOrderSection;
-@class DAOTransaction;
+@class DAOOrder;
 
-@interface DAOOrder : DAOBase
+@interface DAOOrderSection : DAOBase
 
-+ (instancetype)order;
++ (instancetype)orderSection;
 
-- (BOOL)isEqualToOrder:(DAOOrder*)object;
+- (BOOL)isEqualToOrderSection:(DAOOrderSection*)object;
 
-@property (nonatomic, copy) NSString*       status;
-@property (nonatomic, copy) NSString*       state;
+@property (nonatomic, copy) NSString*       orderId;
+@property (nonatomic, copy) DAOOrder*       order;
+
+@property (nonatomic, copy) NSString*       name;
 @property (nonatomic, copy) NSNumber*       total;
 @property (nonatomic, copy) NSDictionary*   data;
 
@@ -39,7 +40,5 @@
 @property (nonatomic, copy) DAOUser*        user;
 
 @property (nonatomic, copy) NSArray<DAOLineitem*>*      lineitems;
-@property (nonatomic, copy) NSArray<DAOOrderSection*>*  orderSections;
-@property (nonatomic, copy) NSArray<DAOTransaction*>*   transactions;
 
 @end
