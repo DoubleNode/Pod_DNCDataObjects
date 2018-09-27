@@ -101,6 +101,22 @@
     return dateFormatter;
 }
 
++ (NSDateFormatter*)firebaseTimeFormatterNoMilliseconds
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'";
+                  });
+    
+    return dateFormatter;
+}
+
 - (id)init
 {
     self = [super init];
@@ -430,6 +446,10 @@
     NSString*   timeString  = [self stringFromString:string];
     
     NSDate* retval = [self.class.firebaseTimeFormatter dateFromString:timeString];
+    if (!retval)
+    {
+        retval = [self.class.firebaseTimeFormatterNoMilliseconds dateFromString:timeString];
+    }
     if (!retval)
     {
         retval = [self.class.defaultDateFormatter1 dateFromString:timeString];

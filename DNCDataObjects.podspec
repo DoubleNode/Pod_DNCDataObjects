@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DNCDataObjects"
-  s.version      = "0.3.1"
+  s.version      = "0.3.2"
   s.summary      = "A base collection of default DNCore Data Objects."
 
   s.description  = <<-DESC
