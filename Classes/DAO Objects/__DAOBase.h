@@ -6,7 +6,7 @@
 //  Copyright © 2016 Darren Ehlers and DoubleNode, LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class DAOUser;
 
@@ -46,6 +46,11 @@
 
 - (NSString*)stringFromFirebaseDate:(NSDate*)date;
 - (NSString*)stringFromFirebaseTime:(NSDate*)time;
+- (NSString*)stringFromLocalTime:(NSDate*)time;
+- (NSString*)stringFromLocalTimeWithTimezone:(NSDate*)time;
+- (NSString*)stringFromLocalTime:(NSDate*)time
+                    withTimezone:(BOOL)withTimezone;
+
 - (NSString*)stringFromString:(NSString*)string;
 
 - (NSString*)santizeKeyForFirebase:(NSString*)keyString;

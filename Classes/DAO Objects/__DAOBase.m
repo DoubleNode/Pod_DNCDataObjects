@@ -85,7 +85,7 @@
     return dateFormatter;
 }
 
-+ (NSDateFormatter*)firebaseTimeFormatter
++ (NSDateFormatter*)firebaseTimeFormatterMilliseconds
 {
     static dispatch_once_t  onceToken;
     static NSDateFormatter* dateFormatter;
@@ -96,6 +96,86 @@
                       dateFormatter = [NSDateFormatter.alloc init];
                       dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
                       dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'";
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)firebaseTimeFormatter
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'";
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)localTimeFormatterMillisecondsWithoutTimezone
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS";
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)localTimeFormatterMilliseconds
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ";
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)localTimeFormatterWithoutTimezone
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss";
+                  });
+    
+    return dateFormatter;
+}
+
++ (NSDateFormatter*)localTimeFormatter
+{
+    static dispatch_once_t  onceToken;
+    static NSDateFormatter* dateFormatter;
+    
+    dispatch_once(&onceToken,
+                  ^()
+                  {
+                      dateFormatter = [NSDateFormatter.alloc init];
+                      dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZ";
                   });
     
     return dateFormatter;
@@ -351,7 +431,41 @@
         return @"";
     }
     
-    return [self.class.firebaseTimeFormatter stringFromDate:time];
+    return [self.class.firebaseTimeFormatterMilliseconds stringFromDate:time];
+}
+
+- (NSString*)stringFromLocalTime:(NSDate*)time
+{
+    return [self stringFromLocalTime:time
+                        withTimezone:NO];
+}
+
+- (NSString*)stringFromLocalTimeWithTimezone:(NSDate*)time
+{
+    return [self stringFromLocalTime:time
+                        withTimezone:YES];
+}
+
+- (NSString*)stringFromLocalTime:(NSDate*)time
+                    withTimezone:(BOOL)withTimezone
+{
+    if ([time isKindOfClass:NSString.class])
+    {
+        return (NSString*)time;
+    }
+    
+    if (!time ||
+        ![time isKindOfClass:NSDate.class])
+    {
+        return @"";
+    }
+    
+    if (!withTimezone)
+    {
+        return [self.class.localTimeFormatterWithoutTimezone stringFromDate:time];
+    }
+    
+    return [self.class.localTimeFormatterMilliseconds stringFromDate:time];
 }
 
 - (NSString*)stringFromString:(NSString*)string
@@ -416,7 +530,7 @@
             return nil;
         }
         
-        return [self.class.firebaseTimeFormatter dateFromString:dateString];
+        return [self.class.firebaseTimeFormatterMilliseconds dateFromString:dateString];
     }
     
     id  numberValue = [self numberFromString:string];
@@ -429,7 +543,11 @@
     
     NSString*   timeString  = [self stringFromString:string];
     
-    NSDate* retval = [self.class.firebaseTimeFormatter dateFromString:timeString];
+    NSDate* retval = [self.class.firebaseTimeFormatterMilliseconds dateFromString:timeString];
+    if (!retval)
+    {
+        retval = [self.class.firebaseTimeFormatter dateFromString:timeString];
+    }
     if (!retval)
     {
         retval = [self.class.defaultDateFormatter1 dateFromString:timeString];
