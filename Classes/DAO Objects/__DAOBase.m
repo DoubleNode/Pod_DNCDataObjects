@@ -95,7 +95,7 @@
                   {
                       dateFormatter = [NSDateFormatter.alloc init];
                       dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
-                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSS'Z'";
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.SSSZ";
                   });
     
     return dateFormatter;
@@ -111,7 +111,7 @@
                   {
                       dateFormatter = [NSDateFormatter.alloc init];
                       dateFormatter.timeZone    = NSTimeZone.localTimeZone; // [NSTimeZone timeZoneWithName:@"GMT"]
-                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'";
+                      dateFormatter.dateFormat  = @"yyyy'-'MM'-'dd'T'HH':'mm':'ssZ";
                   });
     
     return dateFormatter;
