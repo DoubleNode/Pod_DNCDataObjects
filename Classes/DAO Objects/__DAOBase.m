@@ -533,12 +533,15 @@
         return [self.class.firebaseTimeFormatterMilliseconds dateFromString:dateString];
     }
     
-    id  numberValue = [self numberFromString:string];
-    if (numberValue)
+    if (string.length)
     {
-        double  unixDate    = [numberValue doubleValue];
-        
-        return [NSDate dateWithTimeIntervalSince1970:unixDate];
+        id  numberValue = [self numberFromString:string];
+        if (numberValue)
+        {
+            double  unixDate    = [numberValue doubleValue];
+            
+            return [NSDate dateWithTimeIntervalSince1970:unixDate];
+        }
     }
     
     NSString*   timeString  = [self stringFromString:string];
@@ -555,6 +558,10 @@
     if (!retval)
     {
         retval = [self.class.defaultDateFormatter2 dateFromString:timeString];
+    }
+    if (!retval)
+    {
+        retval = [self.class.localTimeFormatterWithoutTimezone dateFromString:timeString];
     }
     
     return retval;
