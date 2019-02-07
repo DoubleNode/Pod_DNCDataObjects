@@ -10,7 +10,7 @@
 
 @class DAOUser;
 
-@interface DAOBase : NSObject<NSCopying>
+@interface DAOBase : NSObject<NSCoding, NSCopying>
 
 @property (nonatomic, copy) NSString*       id;
 
@@ -21,6 +21,8 @@
 @property (nonatomic, copy) NSDate*         _synced;
 @property (nonatomic, copy) NSDate*         _updated;
 @property (nonatomic, copy) DAOUser*        _updatedBy;
+
++ (NSArray*)propertyNames;
 
 - (BOOL)boolFromString:(NSString*)string;
 
