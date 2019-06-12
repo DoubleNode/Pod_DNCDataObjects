@@ -650,7 +650,18 @@
     return retval;
 }
 
-- (NSString*)urlFromString:(NSString*)string
+- (NSURL*)urlFromString:(NSString*)string
+{
+    NSString*   urlString = [self urlStringFromString:string];
+    if (!urlString.length)
+    {
+        return [NSURL.alloc init];
+    }
+    
+    return [NSURL URLWithString:urlString];
+}
+
+- (NSString*)urlStringFromString:(NSString*)string
 {
     if ([string isKindOfClass:NSString.class])
     {

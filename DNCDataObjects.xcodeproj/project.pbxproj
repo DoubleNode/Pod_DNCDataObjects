@@ -443,7 +443,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DNCDataObjectsTests/Pods-DNCDataObjectsTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DNCDataObjectsTests/Pods-DNCDataObjectsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Gizou/Gizou.framework",
 				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
 			);
@@ -454,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DNCDataObjectsTests/Pods-DNCDataObjectsTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DNCDataObjectsTests/Pods-DNCDataObjectsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4DED16F3DE1DDEE24EDE432 /* [CP] Check Pods Manifest.lock */ = {

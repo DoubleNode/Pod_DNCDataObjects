@@ -59,7 +59,8 @@
 
 - (NSDate*)timeFromString:(NSString*)string;
 
-- (NSString*)urlFromString:(NSString*)string;
+- (NSURL*)urlFromString:(NSString*)string;
+- (NSString*)urlStringFromString:(NSString*)string;
 
 - (NSMutableArray*)arrayFromJsonString:(NSString*)string;
 - (NSMutableDictionary*)dictionaryFromJsonString:(NSString*)string;
