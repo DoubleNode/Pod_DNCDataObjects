@@ -63,6 +63,7 @@
     self.authType       = object.authType;
     self.username       = object.username;
     self.password       = object.password;
+    self.security       = object.security;
     
     self.verifyKey      = object.verifyKey;
     self.verifiedDate   = object.verifiedDate;

@@ -32,6 +32,8 @@
 @property (nonatomic, copy) NSString*       name;
 @property (nonatomic, copy) NSNumber*       type;
 @property (nonatomic, copy) NSString*       descriptionString;
+@property (nonatomic, copy) NSString*       security;
+
 @property (nonatomic, copy) NSString*       website;
 @property (nonatomic)       NSNumber*       established;
 @property (nonatomic, copy) NSString*       mailingListURL;

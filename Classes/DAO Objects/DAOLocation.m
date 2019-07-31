@@ -58,6 +58,8 @@
     self.name               = object.name;
     self.type               = object.type;
     self.descriptionString  = object.descriptionString;
+    self.security           = object.security;
+    
     self.website            = object.website;
     self.established        = object.established;
     self.mailingListURL     = object.mailingListURL;

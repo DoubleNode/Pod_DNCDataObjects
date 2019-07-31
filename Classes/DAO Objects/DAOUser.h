@@ -36,6 +36,7 @@
 @property (nonatomic, copy)     NSString*       authType;
 @property (nonatomic, copy)     NSString*       username;
 @property (nonatomic, copy)     NSString*       password;
+@property (nonatomic, copy)     NSString*       security;
 
 @property (nonatomic, copy)     NSString*       verifyKey;
 @property (nonatomic, copy)     NSDate*         verifiedDate;
