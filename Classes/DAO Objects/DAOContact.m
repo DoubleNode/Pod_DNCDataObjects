@@ -64,6 +64,8 @@
     self.latitude   = object.latitude;
     self.longitude  = object.longitude;
     
+    self.verificationDate   = object.verificationDate;
+    
     self.primary    = object.primary;
     self.verified   = object.verified;
     

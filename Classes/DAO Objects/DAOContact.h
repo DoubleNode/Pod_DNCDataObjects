@@ -30,6 +30,8 @@
 @property (nonatomic, copy) NSNumber*       latitude;
 @property (nonatomic, copy) NSNumber*       longitude;
 
+@property (nonatomic, copy) NSDate*         verificationDate;
+
 @property (nonatomic, assign, getter = isPrimary)   BOOL    primary;
 @property (nonatomic, assign, getter = isVerified)  BOOL    verified;
 
