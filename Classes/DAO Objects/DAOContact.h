@@ -30,7 +30,8 @@
 @property (nonatomic, copy) NSNumber*       latitude;
 @property (nonatomic, copy) NSNumber*       longitude;
 
-@property (nonatomic, assign, getter = isEmailVerified) BOOL    emailVerified;
+@property (nonatomic, assign, getter = isPrimary)   BOOL    primary;
+@property (nonatomic, assign, getter = isVerified)  BOOL    verified;
 
 @property (nonatomic, copy) NSString*       userId;
 @property (nonatomic, copy) DAOUser*        user;

@@ -64,7 +64,8 @@
     self.latitude   = object.latitude;
     self.longitude  = object.longitude;
     
-    self.emailVerified  = object.emailVerified;
+    self.primary    = object.primary;
+    self.verified   = object.verified;
     
     self.userId     = object.userId;
     self.user       = object.user;

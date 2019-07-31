@@ -9,6 +9,7 @@
 #import "__DAOBase.h"
 
 @class DAOCategory;
+@class DAOContact;
 @class DAOFavorite;
 @class DAOFollow;
 @class DAOItem;
@@ -73,6 +74,7 @@
 @property (nonatomic, copy) NSArray<DAOPhoto*>*     photos;
 @property (nonatomic, copy) NSArray<DAOWishlist*>*  wishlists;
 
+@property (nonatomic, copy) NSArray<DAOContact*>*       contacts;
 @property (nonatomic, copy) NSArray<DAOSocialAccount*>* socialAccounts;
 
 @end
