@@ -63,6 +63,7 @@
     self.geohash    = object.geohash;
     self.latitude   = object.latitude;
     self.longitude  = object.longitude;
+    self.security   = object.security;
     
     self.verificationDate   = object.verificationDate;
     

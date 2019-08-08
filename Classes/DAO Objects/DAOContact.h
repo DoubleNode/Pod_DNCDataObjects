@@ -29,6 +29,7 @@
 @property (nonatomic, copy) NSString*       geohash;
 @property (nonatomic, copy) NSNumber*       latitude;
 @property (nonatomic, copy) NSNumber*       longitude;
+@property (nonatomic, copy) NSString*       security;
 
 @property (nonatomic, copy) NSDate*         verificationDate;
 
