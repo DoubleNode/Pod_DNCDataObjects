@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "DNCDataObjects"
-  s.version      = "0.3.12"
+  s.version      = "0.3.13"
   s.summary      = "A base collection of default DNCore Data Objects."
 
   s.description  = <<-DESC
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.author             = { "Darren Ehlers" => "me@darrenehlers.com" }
   s.social_media_url   = "http://twitter.com/ehlersd"
 
-  s.platform        = :ios, "10.0"
+  s.platform        = :ios, "11.0"
   s.source          = { :git => "https://github.com/DoubleNode/Pod_DNCDataObjects.git", :tag => "#{s.version}" }
   s.swift_version   = '5.0'
 
