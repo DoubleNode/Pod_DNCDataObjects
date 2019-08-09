@@ -5,10 +5,11 @@ use_frameworks!
 
 inhibit_all_warnings!
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'DNCDataObjects' do
   # Pods for DNCDataObjects
+  pod 'DNCore'
   
   target 'DNCDataObjectsTests' do
     inherit! :search_paths
