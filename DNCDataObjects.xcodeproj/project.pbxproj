@@ -106,6 +106,7 @@
 		6A81CC981E2AD6E800C4613A /* DAOSocialAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOSocialAccount.m; path = "Classes/DAO Objects/DAOSocialAccount.m"; sourceTree = "<group>"; };
 		6A81CCAA1E2B336000C4613A /* DAOCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOCategory.h; path = "Classes/DAO Objects/DAOCategory.h"; sourceTree = "<group>"; };
 		6A81CCAB1E2B336000C4613A /* DAOCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOCategory.m; path = "Classes/DAO Objects/DAOCategory.m"; sourceTree = "<group>"; };
+		6AC77C63231862F0004EF336 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6ACA987B212C6C47000E89C0 /* DAOOrderSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOOrderSection.h; path = "Classes/DAO Objects/DAOOrderSection.h"; sourceTree = "<group>"; };
 		6ACA987C212C6C48000E89C0 /* DAOOrderSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOOrderSection.m; path = "Classes/DAO Objects/DAOOrderSection.m"; sourceTree = "<group>"; };
 		6ACFB5ED1DC9940D00CC388F /* DNCDataObjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNCDataObjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +291,7 @@
 		6ACFB6151DC994AA00CC388F /* Cocoapod */ = {
 			isa = PBXGroup;
 			children = (
+				6AC77C63231862F0004EF336 /* LICENSE */,
 				6ACFB6451DC994DD00CC388F /* README.md */,
 				6ACFB6441DC994DD00CC388F /* DNCDataObjects.podspec */,
 				6ACFB6161DC994AF00CC388F /* Classes */,

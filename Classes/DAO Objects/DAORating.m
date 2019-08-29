@@ -1,9 +1,11 @@
 //
 //  DAORating.m
-//  DoubleNode Core
+//  DoubleNode Dsta Objects
 //
 //  Created by Darren Ehlers on 2016/10/16.
-//  Copyright © 2016 Darren Ehlers and DoubleNode, LLC. All rights reserved.
+//  Copyright © 2016 Darren Ehlers and DoubleNode, LLC.
+//
+//  DNCDataObjects is released under the MIT license. See LICENSE for details.
 //
 
 #import "DAORating.h"
